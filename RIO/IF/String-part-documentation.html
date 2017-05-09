@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- RIGHT PANE -->
+<div id="right-pane" class="pane menu-closed">
+  <div id="right-doc" title="RIO/IF/String.html">
+    <div id="file-show" ></div>
+    
+    <div id="section-idx" style="display: none;">
+      
+      <div id="section-idx-methods" class="enabled" ></div>
+      
+      <div id="section-idx-namespaces" class="disabled" ></div>
+      
+      <div id="section-idx-modules" class="disabled" ></div>
+      
+      <div id="section-idx-in_files" class="enabled" ></div>
+    </div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::String" >
+	  <div id="documentation">
+	    <div id="log"></div>
+	    <div id="test-barx">
+	    </div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::String</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%2B"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">+</span><span
+									    class="method-args">(arg)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Create a <a href="RIO/Rio.html">Rio</a> referencing <a
+href="RIO/Rio.html#method-i-to_str">Rio#to_str</a> + arg.to_str
+</p>
+<pre>
+ rio('afile') + '-0.1'   #=&gt; rio('afile-0.1')</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/string.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">arg</span>) <span class="ruby-identifier">target</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">arg</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="gsub-method" class="method-detail ">
+		  <a name="method-i-gsub"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">gsub</span><span
+									    class="method-args">(re,string)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Create a new <a href="RIO/Rio.html">Rio</a> referencing the result of
+applying ::String#gsub to the  value returned by <a
+href="RIO/Rio.html#method-i-to_s">Rio#to_s.</a> So:
+</p>
+<pre>
+ ario.gsub(re,string)
+</pre>
+<p>
+is equivelent to
+</p>
+<pre>
+ rio(ario.to_s.gsub(re,string))
+</pre>
+<p>
+See also <a href="RIO/IF/String.html#method-i-sub">#sub</a> <a
+href="RIO/IF/String.html#method-i-%2B">#+</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="gsub-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/string.rb, line 86</span>
+86:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">re</span>,<span class="ruby-identifier">string</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">re</span>,<span class="ruby-identifier">string</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="sub-method" class="method-detail ">
+		  <a name="method-i-sub"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">sub</span><span
+									    class="method-args">(re,string)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Create a new <a href="RIO/Rio.html">Rio</a> referencing the result of
+applying ::String#sub to the  value returned by <a
+href="RIO/Rio.html#method-i-to_s">Rio#to_s.</a> So:
+</p>
+<pre>
+ ario.sub(re,string)
+</pre>
+<p>
+is equivelent to
+</p>
+<pre>
+ rio(ario.to_s.sub(re,string))
+</pre>
+<p>
+See also <a href="RIO/IF/String.html#method-i-gsub">#gsub</a>, <a
+href="RIO/IF/String.html#method-i-%2B">#+</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="sub-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/string.rb, line 76</span>
+76:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sub</span>(<span class="ruby-identifier">re</span>,<span class="ruby-identifier">string</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">re</span>,<span class="ruby-identifier">string</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+  </div>
+  
+</div>
+<!-- END OF RIGHT PANE -->
+

@@ -1,0 +1,2914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <title>Module: RIO::IF::RubyIO</title>
+
+
+    <script src="../../js/jquery.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <script src="../../js/jquery-ui/js/jquery-ui-1.8.1.custom.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <link rel="stylesheet"
+	  href="../../js/jquery-ui/css/smoothness/jquery-ui-1.8.1.custom.css"
+	  type="text/css" media="screen" />
+
+
+    <script src="../../js/jquery.ba-replacetext.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <script src="../../js/jquery.getUrlParam.js" type="text/javascript"
+	    charset="utf-8"></script>
+    
+    <script src="../../js/jquery.cookie.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+
+
+
+
+<!--
+
+    <link rel="stylesheet" href="../../rdoc.css" type="text/css"
+	  media="screen" />
+
+    <script src="../../js/tab-body.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+-->
+
+    <link rel="stylesheet" href="/test/rdoc.css" type="text/css"
+	  media="screen" />
+
+    <script src="/test/js/tab-body.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <!--
+    <script src="../../js/darkfish.js" type="text/javascript"
+	    charset="utf-8"></script>
+    -->
+    
+    
+  </head>
+  <body class="module">
+
+
+
+
+
+    <!-- LEFT PANE -->
+    <div id="left-pane" class="pane">
+      <div id="tab-tops">
+	<div id="tab-C" class="context">
+	  <p  class="css-vertical-text">
+	    <a href="../../RIO/IF/RubyIO.html" target="_top">Classes</a>
+	  </p>
+	</div>
+	<div id="tab-M" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/RubyIO.html" target="_top">Methods</a>
+	  </p>
+	</div>
+	<div id="tab-F" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/RubyIO.html" target="_top">Files</a>
+	  </p>
+	</div>
+
+	<div id="tab-I" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/RubyIO.html" target="_top">In Files</a>
+	  </p>
+	</div>
+	<div id="tab-J" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/RubyIO.html" target="_top">Modules</a>
+	  </p>
+	</div>
+	<div id="tab-N" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/RubyIO.html" target="_top">Namespaces</a>
+	  </p>
+	</div>
+
+      </div>
+
+    </div>
+    <!-- END OF LEFT PANE -->
+
+
+      <!-- MIDDLE PANE -->
+      <div id="middle-pane" class="pane">
+	<div id="menu-pane">
+	  <div id="menu-dialog" class="tb_show_listener tb_hide_listener tb_change_listener">
+
+	    <!-- METADATA -->
+	    <div id="metadata">
+
+	      <!-- PROJECT METADATA -->
+	      <div id="project-metadata">
+
+		
+		
+		
+		<div id="fileindex-section" class="section project-section selectable-file-list">
+		  <h3 class="section-header">Files</h3>
+		  <div class="section-body">
+		    <ul>
+		      
+		      <li class="file"><a href="../../README.html">README</a></li>
+		      
+		    </ul>
+		  </div>
+		</div>
+		
+
+		
+		<div id="classindex-section" class="section project-section">
+		  <h3 class="section-header">Class Index</h3>
+		  <div class="section-body">
+		    <ul class="link-list">
+		      
+		      <li><a class="modlink" href="../../RIO.html" target="_top">RIO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc.html" target="_top">RIO::Doc</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/EXAMPLES.html" target="_top">RIO::Doc::EXAMPLES</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/HOWTO.html" target="_top">RIO::Doc::HOWTO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/INDEX.html" target="_top">RIO::Doc::INDEX</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/INTRO.html" target="_top">RIO::Doc::INTRO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/OPTIONAL.html" target="_top">RIO::Doc::OPTIONAL</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/SYNOPSIS.html" target="_top">RIO::Doc::SYNOPSIS</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF.html" target="_top">RIO::IF</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/CSV.html" target="_top">RIO::IF::CSV</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Dir.html" target="_top">RIO::IF::Dir</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/File.html" target="_top">RIO::IF::File</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/FileOrDir.html" target="_top">RIO::IF::FileOrDir</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Grande.html" target="_top">RIO::IF::Grande</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/GrandeEntry.html" target="_top">RIO::IF::GrandeEntry</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/GrandeStream.html" target="_top">RIO::IF::GrandeStream</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Path.html" target="_top">RIO::IF::Path</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/RubyIO.html" target="_top">RIO::IF::RubyIO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/String.html" target="_top">RIO::IF::String</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Test.html" target="_top">RIO::IF::Test</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/YAML.html" target="_top">RIO::IF::YAML</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Rio.html" target="_top">RIO::Rio</a></li>
+		      
+		      <li><a class="modlink" href="../../Kernel.html" target="_top">Kernel</a></li>
+		      
+		    </ul>
+		  </div>
+		  <div id="no-class-search-results" style="display: none;">
+		    No matching classes.
+		  </div>
+		</div>
+
+	      </div>
+	      <!-- END OF PROJECT METADATA -->
+
+
+
+	      <!-- CLASS METADATA -->
+	      <div id="class-metadata">
+
+		<!-- Method Quickref -->
+		
+		<div id="method-list-section" class="section">
+		  <div id="method-list">
+		    <h3 class="section-header">Methods</h3>
+		    <div class="section-body">
+		      <ul class="link-list">
+			
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-binmode" target="_top">#binmode</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-close" target="_top">#close</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-close_write" target="_top">#close_write</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-each_byte" target="_top">#each_byte</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-each_line" target="_top">#each_line</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-eof%3F" target="_top">#eof?</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-fcntl" target="_top">#fcntl</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-fileno" target="_top">#fileno</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-flush" target="_top">#flush</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-fsync" target="_top">#fsync</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-getc" target="_top">#getc</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-gets" target="_top">#gets</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-ioctl" target="_top">#ioctl</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-ioh" target="_top">#ioh</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-ios" target="_top">#ios</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-lineno" target="_top">#lineno</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-lineno%3D" target="_top">#lineno=</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-mode" target="_top">#mode</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-mode%3F" target="_top">#mode?</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-nosync" target="_top">#nosync</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-pid" target="_top">#pid</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-print" target="_top">#print</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-print%21" target="_top">#print!</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-printf" target="_top">#printf</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-printf%21" target="_top">#printf!</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-putc" target="_top">#putc</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-putc%21" target="_top">#putc!</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-puts" target="_top">#puts</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-puts%21" target="_top">#puts!</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-readline" target="_top">#readline</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-readlines" target="_top">#readlines</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-readpartial" target="_top">#readpartial</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-recno" target="_top">#recno</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-sync" target="_top">#sync</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-sync%3F" target="_top">#sync?</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-to_i" target="_top">#to_i</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-to_io" target="_top">#to_io</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-tty%3F" target="_top">#tty?</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-ungetc" target="_top">#ungetc</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-write" target="_top">#write</a></li>
+			
+			<li><a class="methlink" href="RubyIO.html#method-i-write%21" target="_top">#write!</a></li>
+			
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+		
+
+		<!-- Parent Class -->
+		
+
+		<!-- Namespace Contents -->
+		
+
+		<!-- Included Modules -->
+		
+	      </div>
+	      <!-- END OF CLASS METADATA -->
+
+
+	      <!-- FILE METADATA -->
+	      <div id="file-metadata">
+		<div id="file-list-section" class="section selectable-file-list">
+		  <div id="file-list">
+		    
+		    <h3 class="section-header">In Files</h3>
+		    <div class="section-body">
+		      <ul>
+			
+			<li><a href="../../lib/rio/if/rubyio_rb.html"
+			       class="thickbox"
+			       title="lib/rio/if/rubyio.rb">lib/rio/if/rubyio.rb</a></li>
+			
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+		
+		
+	      </div>
+	      <!-- END OF FILE METADATA -->
+	      
+
+
+	      
+	    </div>
+	    <!-- END OF METADATA -->
+
+
+	  </div>
+
+	</div>
+	
+      </div>
+      <!-- END OF MIDDLE PANE -->
+
+
+
+
+
+      <!-- RIGHT PANE -->
+      <div id="right-pane" class="pane menu-closed">
+	<div id="file-show" ></div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::RubyIO" >
+	  <div id="documentation">
+	    <div id="log"></div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::RubyIO</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="binmode-method" class="method-detail ">
+		  <a name="method-i-binmode"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">binmode</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#binmode
+</p>
+<p>
+Puts rio into binary mode. This is useful only in MS-DOS/Windows
+environments.  Once a stream is in binary mode, it cannot be reset to
+nonbinary mode.    
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>.
+</p>
+<pre>
+ rio('afile.exe').binmode.bytes(512).to_a # read a file in 512 byte blocks</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="binmode-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 151</span>
+151:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">binmode</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">binmode</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="close-method" class="method-detail ">
+		  <a name="method-i-close"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">close</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#close
+</p>
+<pre>
+     ario.close   =&gt; nil
+</pre>
+<p>
+Closes <em>ario</em> and flushes any pending writes to the operating
+system. The stream is unavailable for any further data operations; an
+<tt>IOError</tt> is raised if such an attempt is made. I/O streams are
+automatically closed when they are claimed by the garbage collector.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="close-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 467</span>
+467:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">close</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="close-write-method" class="method-detail ">
+		  <a name="method-i-close_write"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">close_write</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="close-write-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 468</span>
+468:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close_write</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">close_write</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="each-byte-method" class="method-detail ">
+		  <a name="method-i-each_byte"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">each_byte</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#each_byte
+</p>
+<pre>
+ ario.each_byte {|byte| block }  =&gt; ario
+</pre>
+<p>
+Calls the given block once for each byte (0..255) in <em>ario</em>, passing
+the byte as an argument.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="each-byte-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 168</span>
+168:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_byte</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">each_byte</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="each-line-method" class="method-detail ">
+		  <a name="method-i-each_line"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">each_line</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#each_line
+</p>
+<pre>
+ ario.each_line(sep_string=$/) {|line| block }  =&gt; ario
+</pre>
+<p>
+Executes the block for every line in <em>ario</em>, where lines are
+separated by <em>sep_string</em>.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="each-line-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 182</span>
+182:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_line</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">each_line</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="eof--method" class="method-detail ">
+		  <a name="method-i-eof%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">eof?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#eof?
+</p>
+<pre>
+ ario.eof     =&gt; true or false
+</pre>
+<p>
+Returns true if <em>ario</em> is at end of file. The stream must be opened
+for reading or an <tt>IOError</tt> will be raised.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="eof--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 371</span>
+371:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eof?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">eof?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="fcntl-method" class="method-detail ">
+		  <a name="method-i-fcntl"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">fcntl</span><span
+									    class="method-args">(integer_cmd,arg)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#fcntl
+</p>
+<pre>
+     ario.fcntl(integer_cmd, arg)    =&gt; integer
+</pre>
+<p>
+Provides a mechanism for issuing low-level commands to control or query
+file-oriented I/O streams. Arguments and results are platform dependent. If
+<em>arg</em> is a number, its value is passed directly. If it is a string,
+it is interpreted as a binary sequence of bytes (<tt>Array#pack</tt> might
+be a useful way to build this string). On Unix platforms, see
+<tt>fcntl(2)</tt> for details. Not implemented on all platforms.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="fcntl-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 481</span>
+481:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fcntl</span>(<span class="ruby-identifier">integer_cmd</span>,<span class="ruby-identifier">arg</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">fcntl</span>(<span class="ruby-identifier">integer_cmd</span>,<span class="ruby-identifier">arg</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="fileno-method" class="method-detail ">
+		  <a name="method-i-fileno"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">fileno</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#fileno
+</p>
+<pre>
+     ario.fileno    =&gt; fixnum
+     ario.to_i      =&gt; fixnum
+</pre>
+<p>
+Returns an integer representing the numeric file descriptor for
+<em>ario</em>.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="fileno-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 500</span>
+500:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fileno</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">fileno</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="flush-method" class="method-detail ">
+		  <a name="method-i-flush"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">flush</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#flush
+</p>
+<pre>
+ ario.flush    =&gt; ario
+</pre>
+<p>
+Flushes any buffered data within <em>ario</em> to the underlying operating
+system (note that this is Ruby internal buffering only; the OS may buffer
+the data as well).
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="flush-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 160</span>
+160:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flush</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">flush</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="fsync-method" class="method-detail ">
+		  <a name="method-i-fsync"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">fsync</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#fsync
+</p>
+<pre>
+     ario.fsync   =&gt; ario
+</pre>
+<p>
+Immediately writes all buffered data in <em>ario</em> to disk and return
+<em>ario</em>.  Does nothing if the underlying operating system does not
+support _fsync(2)_. Note that <tt>fsync</tt> differs from using <a
+href="RIO/IF/RubyIO.html#method-i-sync">#sync.</a> The latter ensures that
+data is flushed from Ruby&#8217;s buffers, but doesn&#8217;t not guarantee
+that the underlying operating system actually writes it to disk.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="fsync-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 513</span>
+513:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fsync</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">fsync</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="getc-method" class="method-detail ">
+		  <a name="method-i-getc"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">getc</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#getc
+</p>
+<pre>
+     ario.getc   =&gt; fixnum or nil
+</pre>
+<p>
+Gets the next 8-bit byte (0..255) from <em>ario</em>. Returns <tt>nil</tt>
+if called at end of file.
+</p>
+<p>
+f = File.new(&#8220;testfile&#8221;) f.getc   #=> 84 f.getc   #=> 104
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="getc-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 562</span>
+562:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getc</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">getc</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="gets-method" class="method-detail ">
+		  <a name="method-i-gets"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">gets</span><span
+									    class="method-args">(sep_string=$/)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#gets
+</p>
+<p>
+Reads the next line from the <a href="RIO/Rio.html">Rio</a>; lines are
+separated by sep_string.  A separator of nil reads the entire contents, and
+a zero-length separator reads  the input a paragraph at a time (two
+successive newlines in the input separate paragraphs). 
+</p>
+<p>
+Returns nil if called at end of file.
+</p>
+<pre>
+ astring  = rio('afile.txt').gets # read the first line of afile.txt into astring</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="gets-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 63</span>
+63:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gets</span>(<span class="ruby-identifier">sep_string</span>=<span class="ruby-identifier">$/</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">gets</span>(<span class="ruby-identifier">sep_string</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="ioctl-method" class="method-detail ">
+		  <a name="method-i-ioctl"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">ioctl</span><span
+									    class="method-args">(integer_cmd,arg)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#ioctl
+</p>
+<pre>
+     ario.ioctl(integer_cmd, arg)    =&gt; integer
+</pre>
+<p>
+Provides a mechanism for issuing low-level commands to control or query I/O
+devices. Arguments and results are platform dependent. If <em>arg</em> is a
+number, its value is passed directly. If it is a string, it is interpreted
+as a binary sequence of bytes. On Unix platforms, see +ioctl(2)+ for
+details. Not implemented on all platforms.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="ioctl-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 492</span>
+492:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ioctl</span>(<span class="ruby-identifier">integer_cmd</span>,<span class="ruby-identifier">arg</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ioctl</span>(<span class="ruby-identifier">integer_cmd</span>,<span class="ruby-identifier">arg</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="ioh-method" class="method-detail ">
+		  <a name="method-i-ioh"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">ioh</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Provides direct access to the IO handle (as would be returned by ::IO#new)
+<b>with</b> filtering.  Reading from and writing to this handle will be
+affected by such things as <a
+href="RIO/IF/GrandeStream.html#method-i-gzip">#gzip</a> and <a
+href="RIO/IF/GrandeStream.html#method-i-chomp">#chomp</a> if they were
+specified for the <a href="RIO/Rio.html">Rio</a>. 
+</p>
+<p>
+Compare this with <a href="RIO/IF/RubyIO.html#method-i-ios">#ios</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="ioh-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 379</span>
+379:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ioh</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ioh</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="ios-method" class="method-detail ">
+		  <a name="method-i-ios"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">ios</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Provides direct access to the IO handle (as would be returned by ::IO#new) 
+Reading from and writing to this handle  is <b>not</b> affected by such
+things as <a href="RIO/IF/GrandeStream.html#method-i-gzip">#gzip</a> and <a
+href="RIO/IF/GrandeStream.html#method-i-chomp">#chomp.</a>
+</p>
+<p>
+Compare this with <a href="RIO/IF/RubyIO.html#method-i-ioh">#ioh</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="ios-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 387</span>
+387:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ios</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ios</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="lineno-method" class="method-detail ">
+		  <a name="method-i-lineno"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">lineno</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#lineno
+</p>
+<p>
+Returns the current line number of a <a href="RIO/Rio.html">Rio</a>.
+</p>
+<p>
+The <a href="RIO/Rio.html">Rio</a> will be opened for reading if not
+already. lineno counts the number of times gets is called, rather than the
+number of newlines encountered &#8212; so lineno will only be accurate if
+the file is read exclusively with line-oriented methods  (<a
+href="RIO/IF/RubyIO.html#method-i-readline">#readline</a>,
+IF::GrandeStream#each_line, <a
+href="RIO/IF/RubyIO.html#method-i-gets">#gets</a> etc.)
+</p>
+<p>
+See also the $. variable and <a
+href="RIO/IF/RubyIO.html#method-i-recno">#recno</a>
+</p>
+<pre>
+ f = rio(&quot;testfile&quot;)
+ f.lineno   #=&gt; 0
+ f.gets     #=&gt; &quot;This is line one\n&quot;
+ f.lineno   #=&gt; 1
+ f.gets     #=&gt; &quot;This is line two\n&quot;
+ f.lineno   #=&gt; 2</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="lineno-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 93</span>
+93:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lineno</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">lineno</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="lineno--method" class="method-detail ">
+		  <a name="method-i-lineno%3D"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">lineno=</span><span
+									    class="method-args">(integer)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#lineno=
+</p>
+<pre>
+ ario.lineno = integer    =&gt; integer
+</pre>
+<p>
+Manually sets the current line number to the given value. <tt>$.</tt> is
+updated only on the next read.
+</p>
+<p>
+f = rio(&#8220;testfile&#8221;) f.gets                     #=> &#8220;This
+is line onen&#8220; $.                         #=> 1 f.lineno = 1000
+f.lineno                   #=> 1000 $. # lineno of last read   #=> 1 f.gets
+#=> &#8220;This is line twon&#8220; $. # lineno of last read   #=> 1001
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="lineno--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 110</span>
+110:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lineno=</span>(<span class="ruby-identifier">integer</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">lineno</span> = <span class="ruby-identifier">integer</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="mode-method" class="method-detail ">
+		  <a name="method-i-mode"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">mode</span><span
+									    class="method-args">(m,*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Explicitly set the mode with which a <a href="RIO/Rio.html">Rio</a> will be
+opened.
+</p>
+<pre>
+  ario.mode('r+')   =&gt; ario
+</pre>
+<p>
+Normally one needs never open a <a href="RIO/Rio.html">Rio</a> or specify
+its mode &#8212; the mode is determined by the operation the <a
+href="RIO/Rio.html">Rio</a> is asked to perform. (i.e. <a
+href="RIO/IF/RubyIO.html#method-i-print">#print</a> requires write access,
+<a href="RIO/IF/RubyIO.html#method-i-readlines">#readlines</a> requires
+read access). However there are times when one wishes to be specific about
+the mode with which a <a href="RIO/Rio.html">Rio</a> will be opened. Note
+that explicitly setting the mode overrides all of Rio&#8217;s internal mode
+logic. If a mode is specified via <a
+href="RIO/IF/RubyIO.html#method-i-mode">#mode</a> or <a
+href="RIO/IF/FileOrDir.html#method-i-open">#open</a> that mode will be
+used. Period.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>.
+</p>
+<p>
+See also <a href="RIO/IF/RubyIO.html#method-i-mode%3F">#mode?</a>
+</p>
+<p>
+If the mode is given as a <a href="RIO/IF/String.html">String</a>, it must
+be one of the values listed in the following table.
+</p>
+<pre>
+  Mode |  Meaning
+  -----+--------------------------------------------------------
+  &quot;r&quot;  |  Read-only, starts at beginning of file  (default mode).
+  -----+--------------------------------------------------------
+  &quot;r+&quot; |  Read-write, starts at beginning of file.
+  -----+--------------------------------------------------------
+  &quot;w&quot;  |  Write-only, truncates existing file
+       |  to zero length or creates a new file for writing.
+  -----+--------------------------------------------------------
+  &quot;w+&quot; |  Read-write, truncates existing file to zero length
+       |  or creates a new file for reading and writing.
+  -----+--------------------------------------------------------
+  &quot;a&quot;  |  Write-only, starts at end of file if file exists,
+       |  otherwise creates a new file for writing.
+  -----+--------------------------------------------------------
+  &quot;a+&quot; |  Read-write, starts at end of file if file exists,
+       |  otherwise creates a new file for reading and
+       |  writing.
+  -----+--------------------------------------------------------
+   &quot;b&quot; |  (DOS/Windows only) Binary file mode (may appear with
+       |  any of the key letters listed above).
+
+ ario = rio('afile').mode('r+').nocloseoneof # file will be opened in r+ mode
+                                            # don't want the file closed at eof
+ ario.seek(apos).gets # read the string at apos in afile
+ ario.rewind.gets # read the string at the beginning of the file
+ ario.close
+</pre>
+<p>
+TODO:
+</p>
+<ul>
+<li><p>
+Add support for integer modes
+</p>
+</li>
+</ul>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="mode-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 436</span>
+436:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mode</span>(<span class="ruby-identifier">m</span>,*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mode</span>(<span class="ruby-identifier">m</span>,*<span class="ruby-identifier">args</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="mode--method" class="method-detail ">
+		  <a name="method-i-mode%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">mode?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Query a Rio&#8217;s mode
+</p>
+<pre>
+   ario.mode?      #=&gt; a mode string
+</pre>
+<p>
+See <a href="RIO/IF/RubyIO.html#method-i-mode">#mode</a>
+</p>
+<pre>
+ ario = rio('afile')
+ ario.puts(&quot;Hello World&quot;) 
+ ario.mode?      #=&gt; 'w' IF::RubyIO#puts requires write access
+
+ ario = rio('afile')
+ ario.gets
+ ario.mode?      #=&gt; 'r' IF::RubyIO#gets requires read access
+
+ ario = rio('afile').mode('w+').nocloseoneof
+ ario.gets
+ ario.mode?      #=&gt; 'w+' Set explictly</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="mode--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 455</span>
+455:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mode?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mode?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="nosync-method" class="method-detail ">
+		  <a name="method-i-nosync"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">nosync</span><span
+									    class="method-args">(arg=false,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Similar to IO#sync= false
+</p>
+<pre>
+     ario.nosync(&amp;block)   =&gt; ario
+</pre>
+<p>
+Sets the <a href="RIO/Rio.html">Rio</a> so that its &#8216;sync mode&#8217;
+will be set to <tt>false</tt> when opened, or set it immediately if already
+open. When sync mode is true, all output is immediately flushed to the
+underlying operating system and is not buffered internally. Returns the
+rio. See also <a href="RIO/IF/RubyIO.html#method-i-fsync">#fsync</a>, <a
+href="RIO/IF/RubyIO.html#method-i-sync">#sync</a>, <a
+href="RIO/IF/RubyIO.html#method-i-sync%3F">#sync?.</a>
+</p>
+<p>
+If a block is given behaves like <tt>ario.nosync.each(&amp;block)</tt>
+</p>
+<pre>
+ f = rio(&quot;testfile&quot;).sync.puts(&quot;Hello World&quot;)
+ f.sync?     # =&gt; true
+ f.nosync
+ f.sync?     # =&gt; false</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="nosync-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 670</span>
+670:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nosync</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">false</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">nosync</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="pid-method" class="method-detail ">
+		  <a name="method-i-pid"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">pid</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#pid
+</p>
+<pre>
+ ario.pid    =&gt; fixnum
+</pre>
+<p>
+Returns the process ID of a child process associated with <em>ario</em>.
+This will be set by <tt>IO::popen</tt>.
+</p>
+<pre>
+ pipe = IO.popen(&quot;-&quot;)
+ if pipe
+   $stderr.puts &quot;In parent, child pid is #{pipe.pid}&quot;
+ else
+   $stderr.puts &quot;In child, pid is #{$$}&quot;
+ end
+</pre>
+<p>
+produces:
+</p>
+<pre>
+ In child, pid is 26209
+ In parent, child pid is 26209</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="pid-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 533</span>
+533:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">pid</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="print-method" class="method-detail ">
+		  <a name="method-i-print"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">print</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO::print
+</p>
+<p>
+Writes the given object(s) to the <a href="RIO/Rio.html">Rio</a>.  If the
+output record separator ($) is not nil,  it will be appended to the output.
+If no arguments are given, prints $_.  Objects that aren&#8217;t strings
+will be converted by calling their to_s method.  Returns the <a
+href="RIO/Rio.html">Rio</a>.
+</p>
+<pre>
+ rio('f.txt').print(&quot;Hello Rio\n&quot;) # print the string to f.txt
+ rio(?-).print(&quot;Hello Rio\n&quot;) # print the string to stdout</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="print-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 276</span>
+276:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">print</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="print--method" class="method-detail ">
+		  <a name="method-i-print%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">print!</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Writes the given objects to the rio as with <a
+href="RIO/IF/RubyIO.html#method-i-print">#print</a> and then closes the <a
+href="RIO/Rio.html">Rio</a>.  Returns the <a href="RIO/Rio.html">Rio</a>.
+</p>
+<p>
+Equivalent to rio.print(*args).close
+</p>
+<pre>
+ rio('f.txt').print!(&quot;Hello Rio\n&quot;) # print the string to f.txt then close it</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="print--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 285</span>
+285:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">print!</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">print!</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="printf-method" class="method-detail ">
+		  <a name="method-i-printf"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">printf</span><span
+									    class="method-args">(*argv)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#printf
+</p>
+<pre>
+ ario.printf(format_string [, obj, ...] )   =&gt; ario
+</pre>
+<p>
+Formats and writes to <em>ario</em>, converting parameters under control of
+the format string. See +Kernel#sprintf+ for details.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="printf-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 301</span>
+301:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">printf</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">printf</span>(*<span class="ruby-identifier">argv</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="printf--method" class="method-detail ">
+		  <a name="method-i-printf%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">printf!</span><span
+									    class="method-args">(*argv)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Writes the given objects to the rio as with <a
+href="RIO/IF/RubyIO.html#method-i-printf">#printf</a> and then closes the
+rio.  Returns the rio.
+</p>
+<p>
+Equivalent to rio.printf(*args).close
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="printf--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 293</span>
+293:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">printf!</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">printf!</span>(*<span class="ruby-identifier">argv</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="putc-method" class="method-detail ">
+		  <a name="method-i-putc"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">putc</span><span
+									    class="method-args">(*argv)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#putc
+</p>
+<pre>
+ ario.putc(obj)    =&gt; ario
+</pre>
+<p>
+If <em>obj</em> is <tt>Numeric</tt>, write the character whose code is
+<em>obj</em>, otherwise write the first character of the string
+representation of <em>obj</em> to <em>ario</em>.
+</p>
+<pre>
+ stdout = rio(?-)
+ stdout.putc &quot;A&quot;
+ stdout.putc 65
+</pre>
+<p>
+<em>produces:</em>
+</p>
+<pre>
+ AA</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="putc-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 326</span>
+326:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">putc</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">putc</span>(*<span class="ruby-identifier">argv</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="putc--method" class="method-detail ">
+		  <a name="method-i-putc%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">putc!</span><span
+									    class="method-args">(*argv)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Writes the given objects to the rio as with <a
+href="RIO/IF/RubyIO.html#method-i-putc">#putc</a> and then closes the rio. 
+Returns the rio.
+</p>
+<p>
+Equivalent to rio.putc(*args).close
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="putc--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 309</span>
+309:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">putc!</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">putc!</span>(*<span class="ruby-identifier">argv</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="puts-method" class="method-detail ">
+		  <a name="method-i-puts"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">puts</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#puts
+</p>
+<p>
+Writes the given objects to the rio as with <a
+href="RIO/IF/RubyIO.html#method-i-print">#print.</a>  Writes a record
+separator (typically a newline) after any that do not already end with a
+newline sequence.  If called with an array argument, writes each element on
+a new line.  If called without arguments, outputs a single record
+separator. Returns the rio.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="puts-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 336</span>
+336:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">puts</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">puts</span>(*<span class="ruby-identifier">args</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="puts--method" class="method-detail ">
+		  <a name="method-i-puts%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">puts!</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Writes the given objects to the rio as with <a
+href="RIO/IF/RubyIO.html#method-i-puts">#puts</a> and then closes the rio. 
+Returns the rio.
+</p>
+<p>
+Equivalent to rio.puts(*args).close
+</p>
+<pre>
+ rio('f.txt').puts!('Hello Rio') # print the string to f.txt then close it</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="puts--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 345</span>
+345:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">puts!</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">puts!</span>(*<span class="ruby-identifier">args</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="readline-method" class="method-detail ">
+		  <a name="method-i-readline"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">readline</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#readline
+</p>
+<pre>
+ ario.readline(sep_string=$/)   =&gt; string
+</pre>
+<p>
+Reads a line as with +IO#gets+, but raises an <tt>EOFError</tt> on end of
+file.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="readline-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 201</span>
+201:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readline</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">readline</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="readlines-method" class="method-detail ">
+		  <a name="method-i-readlines"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">readlines</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#readlines
+</p>
+<p>
+Reads all of the lines in a <a href="RIO/Rio.html">Rio</a>, and returns
+them in anArray.  Lines are separated by the optional aSepString.  The
+stream must be opened for reading or an IOerror will be raised.
+</p>
+<pre>
+ an_array = rio('afile.txt').readlines # read afile.txt into an array
+ an_array = rio('afile.txt').chomp.readlines # read afile.txt into an array with each line chomped</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="readlines-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 194</span>
+194:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readlines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">readlines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="readpartial-method" class="method-detail ">
+		  <a name="method-i-readpartial"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">readpartial</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#readpartial
+</p>
+<p>
+Reads at most maxlen bytes from the I/O stream but it blocks only if ios
+has no data immediately available. If the optional outbuf argument is
+present, it must reference a <a href="RIO/IF/String.html">String</a>, which
+will receive the data. It raises EOFError on end of file.
+</p>
+<p>
+readpartial is designed for streams such as pipe, socket, tty, etc. It
+blocks only when no data immediately available. This means that it blocks
+only when following all conditions hold.
+</p>
+<ul>
+<li><p>
+the buffer in the IO object is empty.
+</p>
+</li>
+<li><p>
+the content of the stream is empty.
+</p>
+</li>
+<li><p>
+the stream is not reached to EOF.
+</p>
+</li>
+</ul>
+<p>
+When readpartial blocks, it waits data or EOF on the stream. If some data
+is reached, readpartial returns with the data. If EOF is reached,
+readpartial raises EOFError.
+</p>
+<p>
+When readpartial doesn�t blocks, it returns or raises immediately. If the
+buffer is not empty, it returns the data in the buffer. Otherwise if the
+stream has some content, it returns the data in the stream. Otherwise if
+the stream is reached to EOF, it raises EOFError.
+</p>
+<pre>
+   r, w = IO.pipe           #               buffer          pipe content
+   w &lt;&lt; &quot;abc&quot;               #               &quot;&quot;              &quot;abc&quot;.
+   r.readpartial(4096)      #=&gt; &quot;abc&quot;       &quot;&quot;              &quot;&quot;
+   r.readpartial(4096)      # blocks because buffer and pipe is empty.
+
+   r, w = IO.pipe           #               buffer          pipe content
+   w &lt;&lt; &quot;abc&quot;               #               &quot;&quot;              &quot;abc&quot;
+   w.close                  #               &quot;&quot;              &quot;abc&quot; EOF
+   r.readpartial(4096)      #=&gt; &quot;abc&quot;       &quot;&quot;              EOF
+   r.readpartial(4096)      # raises EOFError
+
+   r, w = IO.pipe           #               buffer          pipe content
+   w &lt;&lt; &quot;abc\ndef\n&quot;        #               &quot;&quot;              &quot;abc\ndef\n&quot;
+   r.gets                   #=&gt; &quot;abc\n&quot;     &quot;def\n&quot;         &quot;&quot;
+   w &lt;&lt; &quot;ghi\n&quot;             #               &quot;def\n&quot;         &quot;ghi\n&quot;
+   r.readpartial(4096)      #=&gt; &quot;def\n&quot;     &quot;&quot;              &quot;ghi\n&quot;
+   r.readpartial(4096)      #=&gt; &quot;ghi\n&quot;     &quot;&quot;              &quot;&quot;
+</pre>
+<p>
+Note that readpartial is nonblocking-flag insensitive. It blocks even if
+the nonblocking-flag is set.
+</p>
+<p>
+Also note that readpartial behaves similar to sysread in blocking mode. The
+behavior is identical when the buffer is empty. ios.reopen(other_IO) => ios
+ios.reopen(path, mode_str) => ios
+</p>
+<p>
+Reassociates ios with the I/O stream given in other_IO or to a new stream
+opened on path. This may dynamically change the actual class of this
+stream.
+</p>
+<pre>
+   f1 = File.new(&quot;testfile&quot;)
+   f2 = File.new(&quot;testfile&quot;)
+   f2.readlines[0]   #=&gt; &quot;This is line one\n&quot;
+   f2.reopen(f1)     #=&gt; #&lt;File:testfile&gt;
+   f2.readlines[0]   #=&gt; &quot;This is line one\n&quot;</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="readpartial-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 263</span>
+263:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readpartial</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">readpartial</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="recno-method" class="method-detail ">
+		  <a name="method-i-recno"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">recno</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns the current record number of a <a href="RIO/Rio.html">Rio</a>. The
+<tt>recno</tt> is the index  used by the grande selection methods. It
+represents the zero-based index of the last record read. Returns nil until
+a record has been read.
+</p>
+<p>
+see <a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a> <a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a> and <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a>
+</p>
+<p>
+To illustrate: Given a file containing three lines
+&#8220;L0n&#8220;,&#8220;L1n&#8220;,&#8220;L2n&#8220; and a Range (0..1)
+Each of the following would fill anarray with [&#8220;L0n&#8220;,
+&#8220;L1n&#8220;]
+</p>
+<p>
+Given:
+</p>
+<pre>
+ anarray = []
+ range = (0..1)
+
+ all_lines = rio('afile').readlines
+ all_lines.each_with_index do |line,i|
+   anarray &lt;&lt; line if range === i
+ end
+ # anarray == [&quot;L0\n&quot;, &quot;L1\n&quot;]
+
+ anarray = rio('afile').lines[0..1] # anarray == [&quot;L0\n&quot;, &quot;L1\n&quot;]
+</pre>
+<p>
+<tt>recno</tt> counts the number of times <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a> or <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> is used to get a record. 
+so <tt>recno</tt> will only concern parts of the file read with grande
+methods  <a href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a> 
+</p>
+<p>
+See also <a href="RIO/IF/RubyIO.html#method-i-lineno">#lineno</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="recno-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 139</span>
+139:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recno</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">recno</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="sync-method" class="method-detail ">
+		  <a name="method-i-sync"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">sync</span><span
+									    class="method-args">(arg=true,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the &#8216;sync-mode&#8217; of the underlying IO using IO#sync=
+</p>
+<pre>
+     ario.sync(boolean=true,&amp;block)   =&gt; ario
+</pre>
+<p>
+Sets the <a href="RIO/Rio.html">Rio</a> so that its &#8216;sync mode&#8217;
+will be set to <tt>true</tt> or <tt>false</tt> when opened, or set it
+immediately if already open. When sync mode is true, all output is
+immediately flushed to the underlying operating system and is not buffered
+internally. Returns the rio. See also <a
+href="RIO/IF/RubyIO.html#method-i-fsync">#fsync</a>, <a
+href="RIO/IF/RubyIO.html#method-i-nosync">#nosync</a>, <a
+href="RIO/IF/RubyIO.html#method-i-sync%3F">#sync?.</a>
+</p>
+<p>
+If a block is given behaves like <tt>ario.sync(arg).each(&amp;block)</tt>
+</p>
+<pre>
+ f = rio(&quot;testfile&quot;).sync.puts(&quot;Hello World&quot;)
+ f.sync?     # =&gt; true</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="sync-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 653</span>
+653:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sync</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">sync</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="sync--method" class="method-detail ">
+		  <a name="method-i-sync%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">sync?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Query the current &#8220;sync mode&#8221; with IO#sync
+</p>
+<pre>
+     ario.sync?    =&gt; true or false
+</pre>
+<p>
+Returns the current &#8220;sync mode&#8221; of <em>ario</em>. When sync
+mode is true, all output is immediately flushed to the underlying operating
+system and is not buffered by Ruby internally. See also <a
+href="RIO/IF/RubyIO.html#method-i-fsync">#fsync</a>, <a
+href="RIO/IF/RubyIO.html#method-i-sync">#sync</a>, <a
+href="RIO/IF/RubyIO.html#method-i-nosync">#nosync</a>
+</p>
+<pre>
+ f = rio(&quot;testfile&quot;)
+ f.sync?   #=&gt; false</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="sync--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 682</span>
+682:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sync?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">sync?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="to-i-method" class="method-detail ">
+		  <a name="method-i-to_i"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">to_i</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#to_i
+</p>
+<pre>
+  to_i()
+</pre>
+<p>
+Alias for <a href="RIO/IF/RubyIO.html#method-i-fileno">#fileno</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="to-i-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 606</span>
+606:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_i</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">to_i</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="to-io-method" class="method-detail ">
+		  <a name="method-i-to_io"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">to_io</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#to_io
+</p>
+<pre>
+ ario.to_io -&gt; ios
+</pre>
+<p>
+Returns <em>ario</em>.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="to-io-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 613</span>
+613:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_io</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">to_io</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="tty--method" class="method-detail ">
+		  <a name="method-i-tty%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">tty?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#tty?
+</p>
+<pre>
+ ario.tty?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if <em>ario</em> is associated with a terminal device
+(tty), <tt>false</tt> otherwise.
+</p>
+<pre>
+ rio(&quot;testfile&quot;).tty?   #=&gt; false
+ rio(&quot;/dev/tty&quot;).tty?   #=&gt; true</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="tty--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 624</span>
+624:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tty?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">tty?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="ungetc-method" class="method-detail ">
+		  <a name="method-i-ungetc"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">ungetc</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#ungetc
+</p>
+<pre>
+ ario.ungetc(integer)   =&gt; ario
+</pre>
+<p>
+Pushes back one character (passed as a parameter) onto <em>ario</em>, such
+that a subsequent buffered read will return it. Only one character may be
+pushed back before a subsequent read operation (that is, you will be able
+to read only the last of several characters that have been pushed back).
+</p>
+<pre>
+ f = rio(&quot;testfile&quot;)        #=&gt; #&lt;Rio:testfile&gt;
+ c = f.getc                 #=&gt; 84
+ f.ungetc(c).getc           #=&gt; 84</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="ungetc-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 638</span>
+638:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ungetc</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ungetc</span>(*<span class="ruby-identifier">args</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="write-method" class="method-detail ">
+		  <a name="method-i-write"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">write</span><span
+									    class="method-args">(*argv)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#write
+</p>
+<pre>
+ ario.write(string)    =&gt; integer
+</pre>
+<p>
+Writes the given string to <em>ario</em>. If the argument is not a string, 
+it will be converted to a string using <tt>to_s</tt>. Returns the number of
+bytes written.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="write-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 363</span>
+363:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">write</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="write--method" class="method-detail ">
+		  <a name="method-i-write%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">write!</span><span
+									    class="method-args">(*argv)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Writes the given objects to the rio as with <a
+href="RIO/IF/RubyIO.html#method-i-write">#write</a> and then closes the
+rio. 
+</p>
+<p>
+Equivalent to
+</p>
+<pre>
+ ario.write(*args)
+ ario.close</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="write--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/rubyio.rb, line 354</span>
+354:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write!</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">write!</span>(*<span class="ruby-identifier">argv</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+
+      </div>
+      <!-- END OF RIGHT PANE -->
+
+    
+
+  </body>
+</html>
+

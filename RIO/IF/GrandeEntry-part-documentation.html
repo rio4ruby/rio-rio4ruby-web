@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- RIGHT PANE -->
+<div id="right-pane" class="pane menu-closed">
+  <div id="right-doc" title="RIO/IF/GrandeEntry.html">
+    <div id="file-show" ></div>
+    
+    <div id="section-idx" style="display: none;">
+      
+      <div id="section-idx-methods" class="enabled" ></div>
+      
+      <div id="section-idx-namespaces" class="disabled" ></div>
+      
+      <div id="section-idx-modules" class="disabled" ></div>
+      
+      <div id="section-idx-in_files" class="enabled" ></div>
+    </div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::GrandeEntry" >
+	  <div id="documentation">
+	    <div id="log"></div>
+	    <div id="test-barx">
+	    </div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::GrandeEntry</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="all-method" class="method-detail ">
+		  <a name="method-i-all"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">all</span><span
+									    class="method-args">(arg=true,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Recursion Method
+</p>
+<p>
+Sets the <a href="RIO/Rio.html">Rio</a> to all mode (recursive)
+</p>
+<p>
+When called with a block, behaves as if all.each(&amp;block) had been
+called
+</p>
+<p>
+<tt>all</tt> causes subsequent calls to <tt>files</tt> or <tt>dirs</tt> to
+be applied recursively to subdirectories
+</p>
+<pre>
+ rio('adir').all.files('*.[ch]').each { |file| ... } # process all c language source files in adir 
+                                                     # and all subdirectories of adir
+ rio('adir').all.files(/\.[ch]$/) { |file| ... }     # same as above
+ rio('adir').files(&quot;*.[ch]&quot;).all { |file| ... }      # once again
+ rio('adir').all.files[&quot;*.[ch]&quot;]                     # same, but return an array instead of iterating
+ </pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="all-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 344</span>
+344:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">all</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="all--method" class="method-detail ">
+		  <a name="method-i-all%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">all?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns <tt>true</tt> if the rio is in <tt>all</tt> (recursive) mode. See
+<a href="RIO/IF/GrandeEntry.html#method-i-all">#all</a>
+</p>
+<pre>
+ adir = rio('adir').all.dirs
+ adir.all? # true
+ adir.each do |subdir|
+   subdir.all?  # true
+ end
+
+ rio('adir').all? # false
+ </pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="all--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 326</span>
+326:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">all?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="dirs-method" class="method-detail ">
+		  <a name="method-i-dirs"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">dirs</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Selection Method 
+</p>
+<p>
+Sets the rio to return directories. <em>args</em> can be used to select
+which directories are returned.
+</p>
+<pre>
+ ario.dirs(*args) do |f|
+   f.directory?      #=&gt; true
+ end
+</pre>
+<p>
+No aguments selects all directories. if <em>args</em> are:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+selects matching directories
+</p>
+</td></tr>
+<tr><td valign="top">glob</td><td><p>
+selects matching directories
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+called for each directory. the directory is processed unless the proc
+returns false
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+sent to each directory. Each directory is processed unless the symbol
+returns false
+</p>
+</td></tr>
+<tr><td valign="top">Fixnum</td><td><p>
+matched against the &#8220;depth&#8221; of the directory
+</p>
+</td></tr>
+</table>
+<p>
+If a block is given, behaves like
+<tt>ario.dirs(*args).each(&amp;block)</tt>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeEntry.html#method-i-files">#files</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-entries">#entries</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-skipdirs">#skipdirs</a>
+</p>
+<pre>
+ rio('adir').dirs { |frio| ... } # process all directories in 'adir'    
+ rio('adir').all.dirs { |frio| ... } #  same thing recursively
+ rio('adir').dirs(/^\./) { |frio| ...} # process dot directories
+ rio('adir').dirs[/^\./] # return an array of dot directories
+ rio('adir').dirs[:symlink?] # an array of symlinks to directories
+</pre>
+<p>
+Given the directory structure &#8216;adir/a/b/c/d&#8216;
+</p>
+<pre>
+ rio('adir').all.dirs[2]          #=&gt; 'adir/a/b'
+ rio('adir').all.dirs[0..2]       #=&gt; 'adir/a','adir/a/b'
+ rio('adir').all.skipdirs[0..2]   #=&gt; 'adir/a/b/c','adir/a/b/c/d'</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="dirs-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 84</span>
+84:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dirs</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">dirs</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="entries-method" class="method-detail ">
+		  <a name="method-i-entries"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">entries</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Entry Selection Method 
+</p>
+<p>
+No aguments selects all entries.
+</p>
+<p>
+if <tt>args</tt> are:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+selects matching entries
+</p>
+</td></tr>
+<tr><td valign="top">glob</td><td><p>
+selects matching entries
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+called for each entry. the entry is processed unless the proc returns false
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+sent to each entry. Each entry is processed unless the symbol returns false
+</p>
+</td></tr>
+</table>
+<p>
+If a block is given, behaves like
+<tt>ario.etries(*args).each(&amp;block)</tt>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeEntry.html#method-i-files">#files</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-skipentries">#skipentries</a>
+</p>
+<pre>
+ rio('adir').entries { |frio| ... } # process all entries in 'adir'    
+ rio('adir').all.entries { |frio| ... } #  same thing recursively
+ rio('adir').entries(/^\./) { |frio| ...} # process entries starting with a dot
+ rio('adir').entries[/^\./] # return an array of all entries starting with a dot
+ rio('adir').entries[:symlink?] # an array of symlinks in 'adir'</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="entries-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 127</span>
+127:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">entries</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">entries</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="files-method" class="method-detail ">
+		  <a name="method-i-files"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">files</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> <a href="RIO/IF/File.html">File</a>
+Selection Method 
+</p>
+<p>
+Configures the rio to process files. <tt>args</tt> can be used to select
+which files are returned.
+</p>
+<pre>
+ ario.files(*args) do |f|
+   f.file?      #=&gt; true
+ end
+</pre>
+<p>
+No aguments selects all files.
+</p>
+<p>
+<tt>args</tt> may be zero or more of the following:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+selects matching files
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/IF/String.html">String</a></td><td><p>
+treated as a glob, and selects matching files
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+called for each file. the file is processed unless the proc returns false
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+sent to each file. Each file is processed unless the symbol returns false
+</p>
+</td></tr>
+</table>
+<p>
+<tt>files</tt> returns the <a href="RIO/Rio.html">Rio</a> which called it.
+This might seem counter-intuitive at first.  One might reasonably assume
+that
+</p>
+<pre>
+ rio('adir').files('*.rb')
+</pre>
+<p>
+would return files. It does not. It configures the rio to return files and
+returns the <a href="RIO/Rio.html">Rio</a>. This enables chaining for
+further configuration so constructs like
+</p>
+<pre>
+ rio('adir').all.files('*.rb').norecurse('.svn')
+</pre>
+<p>
+are possible.
+</p>
+<p>
+If a block is given, behaves like 
+</p>
+<pre>
+ ario.files(*args).each
+</pre>
+<p>
+See also <a href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-entries">#entries</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-skipfiles">#skipfiles</a>
+</p>
+<pre>
+ rio('adir').files { |frio| ... } # process all files in 'adir'    
+ rio('adir').all.files { |frio| ... } #  same thing recursively
+ rio('adir').files('*.rb') { |frio| ...} # process .rb files
+ rio('adir').files['*.rb'] # return an array of .rb files
+ rio('adir').files[/\.rb$/] # same thing using a regular expression
+ rio('adir').files[:symlink?] # an array of symlinks to files
+ rio('adir').files &gt;&gt; rio('other_dir') # copy files to 'other_dir'
+ rio('adir').files('*.rb') &gt;&gt; rio('other_dir') # only copy .rb files
+</pre>
+<p>
+For Rios that refer to files, <tt>files(*args)</tt> causes the file to be
+processed only if  it meets the criteria specified by the args.
+</p>
+<pre>
+ rio('afile.z').files['*.z'] #=&gt; [rio('afile.z')]
+ rio('afile.q').files['*.z'] #=&gt; []
+</pre>
+<h3>Example Problem</h3>
+<p>
+Fill the array <tt>ruby_progs</tt> with all ruby programs in a directory
+and its subdirectories,  skipping those in <em>subversion</em> (.svn)
+directories. 
+</p>
+<pre>
+ ruby_progs = []
+</pre>
+<p>
+For the purposes of this problem, a Ruby program is defined as a file
+ending with .rb or a file that is executable and whose shebang line
+contains &#8216;ruby&#8217;:
+</p>
+<pre>
+ is_ruby_exe = proc{ |f| f.executable? and f.gets =~ /^#!.+ruby/ }
+</pre>
+<h4>Solution 1. Use the subscript operator.</h4>
+<pre>
+ ruby_progs = rio('adir').norecurse('.svn').files['*.rb',is_ruby_exe]
+</pre>
+<p>
+Explanation:
+</p>
+<ol>
+<li><p>
+Create the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+Create a <a href="RIO/Rio.html">Rio</a> for a directory
+</p>
+<pre>
+ rio('adir')
+</pre>
+</li>
+<li><p>
+Configure the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+Specify recursion and that &#8217;.svn&#8217; directories should not be
+included.
+</p>
+<pre>
+ rio('adir').norecurse('.svn')
+</pre>
+<p>
+Select files
+</p>
+<pre>
+ rio('adir').norecurse('.svn').files
+</pre>
+<p>
+Limit to files ending with &#8217;.rb&#8217;
+</p>
+<pre>
+ rio('adir').norecurse('.svn').files('*.rb')
+</pre>
+<p>
+Also allow files for whom <tt>is_ruby_exe</tt> returns true
+</p>
+<pre>
+ rio('adir').norecurse('.svn').files('*.rb',is_ruby_exe)
+</pre>
+</li>
+<li><p>
+Do the I/O
+</p>
+<p>
+Return an array rather than iterating thru them
+</p>
+<pre>
+ ruby_progs = rio('adir').norecurse('.svn').files['*.rb',is_ruby_exe]
+</pre>
+</li>
+</ol>
+<h4>Solution  2. Use the copy-to operator</h4>
+<pre>
+ rio('adir').files('*.rb',is_ruby_exe).norecurse('.svn') &gt; ruby_progs
+</pre>
+<p>
+Explanation:
+</p>
+<ol>
+<li><p>
+Create the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+Create a <a href="RIO/Rio.html">Rio</a> for a directory
+</p>
+<pre>
+ rio('adir')
+</pre>
+</li>
+<li><p>
+Configure the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+Select only files
+</p>
+<pre>
+ rio('adir').files
+</pre>
+<p>
+Limit to files ending with &#8217;.rb&#8217;
+</p>
+<pre>
+ rio('adir').files('*.rb')
+</pre>
+<p>
+Also allow files for whom <tt>is_ruby_exe</tt> returns true
+</p>
+<pre>
+ rio('adir').files('*.rb',is_ruby_exe)
+</pre>
+<p>
+Specify recursion and that &#8217;.svn&#8217; directories should not be
+included.
+</p>
+<pre>
+ rio('adir').files('*.rb',is_ruby_exe).norecurse('.svn')
+</pre>
+</li>
+<li><p>
+Do the I/O
+</p>
+<p>
+Copy the <a href="RIO/Rio.html">Rio</a> to ruby_progs
+</p>
+<pre>
+ rio('adir').files('*.rb',is_ruby_exe).norecurse('.svn') &gt; ruby_progs
+</pre>
+</li>
+</ol>
+<h4>Example Discussion</h4>
+<p>
+Note that the only difference between Step 2 of Solution 1 and that of
+Solution 2 is  the order of the configuration methods. Step 2 of Solution 1
+would have worked equally  well:
+</p>
+<pre>
+ rio('adir').norecurse('.svn').files('*.rb',is_ruby_exe) &gt; ruby_progs
+</pre>
+<p>
+Furthermore if our problem were changed slightly and instead of having our
+results ending up in an array, we wished to iterate through them, we could
+use:
+</p>
+<pre>
+ rio('adir').norecurse('.svn').files('*.rb',is_ruby_exe) { |ruby_prog_rio| ... }
+</pre>
+<p>
+Note the similarities. In fact, solution 1 could have been written:
+</p>
+<pre>
+ 
+ rio('adir').norecurse('.svn').files('*.rb',is_ruby_exe).to_a
+</pre>
+<p>
+or
+</p>
+<pre>
+ rio('adir').norecurse('.svn').files('*.rb',is_ruby_exe)[]
+</pre>
+<p>
+Passing the arguments for <tt>files</tt> to the subscript operator is
+syntactic sugar. The subscript operator does not really take any arguments
+of its own. It always passes them to the most recently called of the grande
+selection methods (or the default selection method, if none have been
+called). So,
+</p>
+<pre>
+ rio('adir').files['*.rb']
+</pre>
+<p>
+is a shortcut for
+</p>
+<pre>
+ rio('adir').files('*.rb').to_a
+</pre>
+<p>
+and
+</p>
+<pre>
+ rio('adir')['*.rb']
+</pre>
+<p>
+is a shortcut for
+</p>
+<pre>
+ rio('adir').entries('*.rb').to_a
+</pre>
+<p>
+and
+</p>
+<pre>
+ rio('afile').lines[0..10]
+</pre>
+<p>
+is a shortcut for
+</p>
+<pre>
+ rio('afile').lines(0..10).to_a
+</pre>
+<p>
+And so on.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="files-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 294</span>
+294:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">files</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">files</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="norecurse-method" class="method-detail ">
+		  <a name="method-i-norecurse"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">norecurse</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Recursion Exclude Method
+</p>
+<p>
+Sets the <a href="RIO/Rio.html">Rio</a> to recurse into directories like
+#all. If no args are provided, no directories will be recursed into. If
+args are provided, behaves like <a
+href="RIO/IF/GrandeEntry.html#method-i-recurse">#recurse</a>, except that
+matching directories will <b>not</b> be recursed into
+</p>
+<pre>
+ rio('adir').norecurse('.svn') { |drio| ... } # recurse, skipping subversion directories
+
+ rio('adir').norecurse(3) {|drio| ... } # only recurse 2 levels deep into a directory structure</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="norecurse-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 381</span>
+381:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">norecurse</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">norecurse</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="recurse-method" class="method-detail ">
+		  <a name="method-i-recurse"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">recurse</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Recursion Selection
+Method
+</p>
+<p>
+Sets the <a href="RIO/Rio.html">Rio</a> to recurse into directories like
+#all. If no args are provided behaves like #all.  If args are provided,
+they are processed like <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a> to select which
+subdirectories should  be recursed into. <a
+href="RIO/IF/GrandeEntry.html#method-i-recurse">#recurse</a> always implies
+#all.
+</p>
+<p>
+<tt>args</tt> may be one or more of:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+recurse into matching subdirectories
+</p>
+</td></tr>
+<tr><td valign="top">glob</td><td><p>
+recurse into matching subdirectories
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+called for each directory. The directory is recursed into unless the proc
+returns false
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+sent to each directory. Each directory is recursed into unless the symbol
+returns false
+</p>
+</td></tr>
+<tr><td valign="top">Fixnum</td><td><p>
+recurse into directories only at the given depth
+</p>
+</td></tr>
+<tr><td valign="top">Range</td><td><p>
+recurse into directories at a range of depths
+</p>
+</td></tr>
+</table>
+<p>
+If a block is given, behaves like
+<tt>ario.recurse(*args).each(&amp;block)</tt>
+</p>
+<p>
+See also <a
+href="RIO/IF/GrandeEntry.html#method-i-norecurse">#norecurse</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-all">#all</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a>
+</p>
+<pre>
+ rio('adir').recurse('test*') { |drio| ... } # process all entries and all entries in subdirectories
+                                             # starting with 'test' -- recursively</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="recurse-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 368</span>
+368:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recurse</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">recurse</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skipdirs-method" class="method-detail ">
+		  <a name="method-i-skipdirs"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skipdirs</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Exclude Method 
+</p>
+<p>
+If no args are provided selects anything but directories.
+</p>
+<pre>
+ ario.skipdirs do |el|
+   el.directory?     #=&gt; false
+ end
+</pre>
+<p>
+If args are provided, sets the rio to select directories as with <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a>, but the arguments
+are used to determine which directories will <b>not</b> be processed
+</p>
+<p>
+If a block is given behaves like 
+</p>
+<pre>
+ ario.skipdirs(*args).each(&amp;block)
+</pre>
+<p>
+See <a href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a>
+</p>
+<pre>
+ rio('adir').skipdirs { |ent| ... } # iterate through everything except directories
+ rio('adir').skipdirs(/^\./) { |drio| ... } # iterate through directories, skipping dot directories</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skipdirs-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 104</span>
+104:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skipdirs</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skipdirs</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skipentries-method" class="method-detail ">
+		  <a name="method-i-skipentries"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skipentries</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> Directory Entry Rejection Method 
+</p>
+<p>
+No aguments rejects all entries.
+</p>
+<p>
+Behaves like <a
+href="RIO/IF/GrandeEntry.html#method-i-entries">#entries</a>, except that
+matching entries are excluded.
+</p>
+<p>
+See also <a href="RIO/IF/GrandeEntry.html#method-i-entries">#entries</a>,
+<a href="RIO/IF/Grande.html#method-i-skip">#skip</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skipentries-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 137</span>
+137:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skipentries</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skipentries</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skipfiles-method" class="method-detail ">
+		  <a name="method-i-skipfiles"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skipfiles</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html">Grande</a> <a href="RIO/IF/File.html">File</a>
+Exclude Method 
+</p>
+<p>
+If no args are provided selects anything but files.
+</p>
+<pre>
+ ario.skipfiles do |el|
+   el.file?     #=&gt; false
+ end
+</pre>
+<p>
+If args are provided, sets the rio to select files as with <a
+href="RIO/IF/GrandeEntry.html#method-i-files">#files</a>, but the arguments
+are used to determine which files will <b>not</b> be processed
+</p>
+<p>
+If a block is given behaves like
+<tt>ario.skipfiles(*args).each(&amp;block)</tt>
+</p>
+<p>
+See <a href="RIO/IF/GrandeEntry.html#method-i-files">#files</a>, <a
+href="RIO/IF/Grande.html#method-i-skip">#skip</a>
+</p>
+<pre>
+ rio('adir').skipfiles { |ent| ... } # iterate through everything except files
+ rio('adir').skipfiles('*~') { |frio| ... } # iterate through files, skipping those ending with a tilde</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skipfiles-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_entry.rb, line 313</span>
+313:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skipfiles</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skipfiles</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+  </div>
+  
+</div>
+<!-- END OF RIGHT PANE -->
+

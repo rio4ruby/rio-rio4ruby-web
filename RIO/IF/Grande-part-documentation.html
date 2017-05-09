@@ -1,0 +1,1978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- RIGHT PANE -->
+<div id="right-pane" class="pane menu-closed">
+  <div id="right-doc" title="RIO/IF/Grande.html">
+    <div id="file-show" ></div>
+    
+    <div id="section-idx" style="display: none;">
+      
+      <div id="section-idx-methods" class="enabled" ></div>
+      
+      <div id="section-idx-namespaces" class="disabled" ></div>
+      
+      <div id="section-idx-modules" class="disabled" ></div>
+      
+      <div id="section-idx-in_files" class="enabled" ></div>
+    </div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::Grande" >
+	  <div id="documentation">
+	    <div id="log"></div>
+	    <div id="test-barx">
+	    </div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::Grande</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%3C"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">&lt;</span><span
+									    class="method-args">(source)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande Copy-From Operator
+</p>
+<p>
+The copy-from grande-operator copies a Rio from another Rio or another ruby
+object.  Its operation is dependent on the the file system objects
+referenced, the rio options set, and the state of its source and
+destination. In the broadest of terms it could be described as doing the
+following:
+</p>
+<pre>
+   source.each do |entry|
+     destination &lt;&lt; entry
+   end
+</pre>
+<p>
+That is to say, it iterates through its argument, calling the copy-from
+operator again for each element. While it is not implemented like this, and
+the above code would not give the same results, This generalized
+description is convenient.
+</p>
+<p>
+For example the code:
+</p>
+<pre>
+ destination &lt; source
+</pre>
+<p>
+is like
+</p>
+<pre>
+ source.each { |element| destination &lt;&lt; element }
+</pre>
+<p>
+for any of the following definitions of src and dst
+</p>
+<ul>
+<li><p>
+copying files
+</p>
+<pre>
+ src = rio('afile')
+ dst = rio('acopy')
+</pre>
+</li>
+<li><p>
+copying parts of files
+</p>
+<pre>
+ src = rio('afile').lines(0..9)
+ dst = rio('acopy')
+</pre>
+</li>
+<li><p>
+copying directories
+</p>
+<pre>
+ src = rio('srcdir')
+ dst = rio('dstdir')
+</pre>
+</li>
+<li><p>
+copy directories selectively
+</p>
+<pre>
+ src = rio('srcdir').dirs(/^\./).files('*.tmp')
+ dst = rio('dstdir')
+</pre>
+</li>
+<li><p>
+copying to a file from an array
+</p>
+<pre>
+ src = [&quot;line0\n&quot;,&quot;line1\n&quot;]
+ dst = rio('afile')
+</pre>
+</li>
+<li><p>
+copying to a directory from an array
+</p>
+<pre>
+ array = [rio(&quot;file1&quot;),rio(&quot;file2&quot;)]
+ dst = rio('adir')
+</pre>
+</li>
+</ul>
+<p>
+Arrays are handled differently depending on whether the rio references a
+file or a directory.
+</p>
+<ul>
+<li><p>
+If the destination is a file. 
+</p>
+<pre>
+ dest = rio('afile') 
+ dest &lt; array
+ # is roughly equivelent to
+ array.each do |el|
+   case el
+   when ::String then dest.print(el)
+   when ::Rio then dest &lt;&lt; el
+   else dest &lt;&lt; rio(el)
+ end
+</pre>
+</li>
+<li><p>
+If the destination is a directory
+</p>
+<pre>
+ dest = rio('adir') 
+ dest &lt; array
+ # is roughly equivelent to
+ array.each do |el|
+   case el
+   when ::String then rio(el)
+   when ::Rio then dest &lt;&lt; el
+   else dest &lt;&lt; rio(el)
+ end
+</pre>
+</li>
+</ul>
+<p>
+To improve run-time efficiency, Rio will choose from among several
+strategies when copying. For instance when no file or directory filtering
+is specified, FileUtils#cp_r is used to copy directories; and when no line
+filtering is specified, FileUtils#cp is used to copy files.
+</p>
+<pre>
+ rio('adir') &lt; rio('anotherdir') # 'anotherdir' is copied to 'adir' using FileUtils#cp_r
+ rio('adir') &lt; rio('anotherdir').files('*.rb') # copy only .rb files
+ rio('afile') &lt; rio('anotherfile') # 'anotherfile' is copied to 'afile' using FileUtils#cp
+ rio('afile') &lt; ios # ios must be an IO object opened for reading
+ rio('afile') &lt; astring # basically the same as rio('afile').print(astring)
+
+ anarray = [ astring, rio('anotherfile') ] 
+ rio('afile') &lt; anarray # copies each element to 'afile' as if one had written
+    ario = rio('afile')
+    anarray.each do |el| 
+      ario &lt;&lt; el
+    end
+    ario.close
+ rio('skeldir') &lt; rio('adir').dirs # copy only the directory structure
+ rio('destdir') &lt; rio('adir').dirs.files(/^\./) # copy the directory structure and all dot files
+ 
+</pre>
+<p>
+See also <a href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to), <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 616</span>
+616:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;</span>(<span class="ruby-identifier">source</span>) 
+617:         <span class="ruby-constant">RIO</span><span class="ruby-operator">::</span><span class="ruby-identifier">no_warn</span> {
+618:           <span class="ruby-identifier">target</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">source</span>
+619:         }
+620:         <span class="ruby-keyword kw">self</span> 
+621:       <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%3C%3C"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">&lt;&lt;</span><span
+									    class="method-args">(source)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande Append-From Operator
+</p>
+<p>
+The append-from grande-operator copies a Rio from another Rio or another
+ruby object. This behaves like <a
+href="RIO/IF/Grande.html#method-i-%3C">#<</a> (copy-from) except unopened
+Rios are opened for append.
+</p>
+<p>
+The following summarizes how objects are copied:
+</p>
+<table>
+<tr><td valign="top">IO</td><td><p>
+IO#each is used to iterate through the source with each record appended to
+the Rio
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+Each element of the Array is appended individually to the Rio.
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/IF/String.html">String</a></td><td><p>
+The string is appended to the Rio using <a
+href="RIO/IF/RubyIO.html#method-i-print">#print</a>
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/Rio.html">Rio</a></td><td><p>
+The source Rio is appended using its <a
+href="RIO/IF/Grande.html#method-i-%3E%3E">#>></a> (append-to) operator
+</p>
+</td></tr>
+</table>
+<p>
+See <a href="RIO/IF/Grande.html#method-i-%3C">#<</a> (copy-from)
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 525</span>
+525:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">source</span>) <span class="ruby-identifier">target</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">source</span>; <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%3E"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">&gt;</span><span
+									    class="method-args">(destination)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande Copy-To Operator
+</p>
+<p>
+The copy grande-operator copies a Rio to a another Rio or another ruby
+object. The behaviour  and the library used depend on the types of the of
+the source and destination. For simple file or directory copying
+::FileUtils#cp or ::FileUtils#cp_r will be used. If any of the Rio grande
+methods are specified for the source or destination, the source Rio will be
+iterated through copying records to the destintion as specified. Roughly
+equivelant to
+</p>
+<pre>
+ dst = rio('dst_file')
+ rio('src_file').each do |line|
+   dst.print(line)
+ end
+ dst.close
+</pre>
+<p>
+The destination of the copy operators may be a:
+</p>
+<table>
+<tr><td valign="top">IO</td><td><p>
+Each record of the Rio is written to the IO using IO#print. The IO must be
+opened for writing.
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+Each record or entry of the Rio becomes an element of the array
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/IF/String.html">String</a></td><td><p>
+Puts the entire contents of the Rio into the string
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/Rio.html">Rio</a></td><td><p>
+Depends on the destination. See below.
+</p>
+</td></tr>
+</table>
+<p>
+Copy a file to a file
+</p>
+<pre>
+ rio('src_file') &gt; rio('dst_file') 
+</pre>
+<p>
+Copy a file to a directory
+</p>
+<pre>
+ rio('src_file') &gt; rio('dst_dir')
+</pre>
+<p>
+Copy a directory to another directory
+</p>
+<pre>
+ rio('src_dir') &gt; rio('dst_dir')
+</pre>
+<p>
+Make an ungizipped copy of a gzipped file
+</p>
+<pre>
+ rio('src.txt.gz').gzip &gt; rio('dst.txt')
+</pre>
+<p>
+Copying to an array
+</p>
+<pre>
+ rio('afile') &gt; ary # each line of the file becomes an element of the ary
+ rio('afile').chomp &gt; ary # same thing with lines chomped
+ rio('afile.gz').gzip.chomp &gt; ary # same thing from a gzipped file
+
+ rio('afile').lines(0..9) &gt; ary # ary will contain only the first ten lines of the file
+ rio('afile').chomp.lines(0..9) &gt; ary # same thing with lines chomped
+ rio('afile').gzip.chomp.lines(0..9) &gt; ary # same thing from a gzipped file
+
+ rio('afile').skiplines(0..9) &gt; ary # ary will contain all but the first ten lines of the file
+
+ rio('adir') &gt; ary # ary will contain a \Rio for each entry in the directory
+ rio('adir').files &gt; ary # same, but only files
+ rio('adir').files('*.rb') &gt;ary # same, but only .rb files
+</pre>
+<p>
+Copying to a string
+</p>
+<pre>
+ rio('afile') &gt; astring # slurp the entire contents of the file into astring
+ astring = rio('afile').contents # same effect
+</pre>
+<p>
+Copy the first line <b>and</b> every line containing the word Rio into a
+gzipped file
+</p>
+<pre>
+ rio('src').lines(1,/Rio/) &gt; rio('dst.gz').gzip
+</pre>
+<p>
+Copy lines of a web page into an array with each line chomped
+</p>
+<pre>
+ rio('http://ruby-doc.org/index.html').chomp &gt; an_array
+</pre>
+<p>
+Copy the first and 8th through 10th columns of the first ten rows of a
+gzipped csv  file on a web site into a local gzipped csv file that uses
+semi-colons as separators
+</p>
+<pre>
+ rio('http://host/file.csv.gz').columns(0,7..9).gzip.csv[0..9] &gt; rio('localfile.csv.gz').csv(';').gzip
+</pre>
+<p>
+See also <a href="RIO/IF/Grande.html#method-i-%3E%3E">#>></a>, <a
+href="RIO/IF/Grande.html#method-i-%7C">#|</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 432</span>
+432:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&gt;</span>(<span class="ruby-identifier">destination</span>) 
+433:         <span class="ruby-constant">RIO</span><span class="ruby-operator">::</span><span class="ruby-identifier">no_warn</span> {
+434:           <span class="ruby-identifier">target</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">destination</span>;
+435:         } 
+436:         <span class="ruby-keyword kw">self</span> 
+437:       <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%3E%3E"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">&gt;&gt;</span><span
+									    class="method-args">(destination)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande Append-To Operator
+</p>
+<p>
+The append-to grande-operator is the same as <a
+href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to) except that it
+opens the destination for append. The destination can be a kind of:
+</p>
+<table>
+<tr><td valign="top">IO</td><td><p>
+Each record of the Rio is written to the IO using IO#print. The IO must be
+opened for writing.
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+Each record or entry of the Rio is appended to the destination array
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/IF/String.html">String</a></td><td><p>
+Appends the entire contents of the Rio to destination
+</p>
+</td></tr>
+<tr><td valign="top"><a href="RIO/Rio.html">Rio</a></td><td><p>
+Just like <a href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to) except
+the unopened object are  opened for append. If the destination is already
+opened for writing or is a  directory, this is identical to <a
+href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to) 
+</p>
+</td></tr>
+</table>
+<p>
+See <a href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to)
+</p>
+<pre>
+ rio('afile') &gt;&gt; rio('anotherfile') # append the contents of 'afile' to 'anotherfile'
+ rio('afile') &gt;&gt; rio('adir') # copies 'afile' to the directory 'adir'
+ rio('adir') &gt;&gt; rio('anotherdir') # copy directory 'adir' recursively to 'anotherdir' 
+ rio('adir') &gt;&gt; array # a Rio for each entry in the directory will be appended to ary</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 506</span>
+506:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&gt;&gt;</span>(<span class="ruby-identifier">destination</span>) <span class="ruby-identifier">target</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">destination</span>; <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%5B%5D"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">[]</span><span
+									    class="method-args">(*selectors)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande subscript operator. 
+</p>
+<p>
+For files this returns all or part of a file as an array.
+</p>
+<p>
+For directories this returns all or some of the entries in a directory
+</p>
+<h3>Files</h3>
+<p>
+This combines the record selection offered by <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a> with the
+conversion to an array provided by <a
+href="RIO/IF/Grande.html#method-i-to_a">#to_a.</a> The following two are
+equivelant:
+</p>
+<pre>
+ ario[*args]
+ ario.records(*args).to_a
+</pre>
+<p>
+What constitutes an array element is determined by <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a>,  or by an
+extension such as <a href="RIO/IF/CSV.html#method-i-csv">#csv.</a> <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a> is the default.
+</p>
+<p>
+Arguments may consist of zero or more integers, ranges, regular
+expressions, symbols, procs, and arrays An empty argument list selects all
+records
+</p>
+<p>
+Records are selected as follows.
+</p>
+<table>
+<tr><td valign="top">range</td><td><p>
+specifies a range of records to be selected (zero based)
+</p>
+</td></tr>
+<tr><td valign="top">regexp</td><td><p>
+matching records will be selected.
+</p>
+</td></tr>
+<tr><td valign="top">integer</td><td><p>
+treated like a one element range
+</p>
+</td></tr>
+<tr><td valign="top">symbol</td><td><p>
+the symbol is sent to each record. Record is selected  unless false is
+returned
+</p>
+</td></tr>
+<tr><td valign="top">proc</td><td><p>
+the proc is called with the record as an argument.  Record is selected
+unless false is returned
+</p>
+</td></tr>
+<tr><td valign="top">array</td><td><p>
+the array may contain any of the other selector types. Record is selected
+unless any of the selectors returns false. (a logical and)
+</p>
+</td></tr>
+</table>
+<p>
+A record matching <b>any</b> of the selectors will be included in the
+array. (acts like an <em>or</em>)
+</p>
+<p>
+Because this is implemented in terms of the <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>,  When only record ranges
+are used to select records, iteration will stop when the recno exceeds the
+maximum of any range. That is to say
+</p>
+<p>
+This reads one record from a file and returns it
+</p>
+<pre>
+ rio('bigfile.mp3').bytes(1024)[0]
+</pre>
+<p>
+While this reads <b>all</b> records from a file and returns the first one
+</p>
+<pre>
+ rio('bigfile.mp3').bytes(1024).to_a[0]
+</pre>
+<h3>Directories</h3>
+<p>
+This combines the entry selection offered by <a
+href="RIO/IF/GrandeEntry.html#method-i-entries">#entries</a> with the
+conversion to an array provided by <a
+href="RIO/IF/Grande.html#method-i-to_a">#to_a.</a> The following two are
+equivelant:
+</p>
+<pre>
+ ario[*args]
+ ario.entries(*args).to_a
+</pre>
+<p>
+Arguments may consist of strings (treated as globs) or regular expressions.
+An empty argument list selects all entries See ::Dir#glob and
+::File::fnmatch? for more in information on <em>globs</em>.  Be warned that
+using the &#8217;**&#8217; glob recurses into directories independently of
+<a href="RIO/IF/GrandeEntry.html#method-i-all">#all</a> and using both is
+unsupported.
+</p>
+<pre>
+ ario = rio('adir')
+ ario[] # returns an array containg all entries in _adir_
+ ario[/^zippy/] # all entries starting with 'zippy'
+ ario['zippy*'] # same thing
+</pre>
+<p>
+As with <a href="RIO/IF/Grande.html#method-i-each">#each</a>:
+</p>
+<ul>
+<li><p>
+Files and directories are returned as Rios
+</p>
+</li>
+<li><p>
+The types of entries is also affected by <a
+href="RIO/IF/GrandeEntry.html#method-i-files">#files</a> and <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs.</a>
+</p>
+<pre>
+ rio('adir').files['*.txt'] # array of all .txt files
+ rio('adir').dirs[/^\./] # array of all dot directories
+</pre>
+</li>
+<li><p>
+Recursion is enabled using <a
+href="RIO/IF/GrandeEntry.html#method-i-all">#all</a>
+</p>
+<pre>
+ rio('adir').all.files['*.[ch]'] # array of c source files in adir and its subdirecories
+ rio('adir').all.dirs[/^\.svn/]  # array of subversion directories in adir and subdirectories
+</pre>
+</li>
+<li><p>
+<a href="RIO/IF/GrandeEntry.html#method-i-files">#files</a> and <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a> act independently of
+each other.  Specifying both will cause both to be returned.  The argument
+list to <a href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a> will be
+applied to the closest.
+</p>
+<pre>
+ rio('adir').files('*.rb').dirs['ruby*'] # array of .rb files and 
+                                         # directories starting with 'ruby'
+ rio('adir').dirs('ruby*').files['*.rb'] # same thing
+</pre>
+</li>
+</ul>
+<h3>Lines</h3>
+<p>
+This section applies similarly to <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a>,  <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a>, and <a
+href="RIO/IF/GrandeStream.html#method-i-rows">#rows</a>
+</p>
+<p>
+Using <a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a> and
+related methods with a Rio referencing a directory  imples <a
+href="RIO/IF/GrandeEntry.html#method-i-files">#files</a> and will cause an
+array of the lines or bytes in the  files to be returned. As above, the
+arguments to the subscript operator will be applied to the closest.
+</p>
+<pre>
+ rio('adir').lines[] # array of all lines in the files in 'adir'
+ rio('adir').files.lines[] # same thing
+ rio('adir').lines(0..9).files['*.txt'] # array of the first ten lines of all .txt files
+ rio('adir').files('*.txt').lines[0..9] # same thing
+ rio('adir').all.files('*.rb').lines[/^\s*require/] # array of 'require' lines in .rb files in
+                                                    # 'adir and its subdirectories
+</pre>
+<p>
+Note the difference between the following similar usages
+</p>
+<pre>
+ it1 = rio('adir').files('*.rb') # returns a \Rio, prepared for selecting ruby files
+ it2 = rio('adir').files['*.rb'] # returns an array of the ruby files
+</pre>
+<p>
+The second example above could have been written
+</p>
+<pre>
+ it2 = it1.to_a
+</pre>
+<p>
+Examples:
+</p>
+<pre>
+ rio('afile.txt').lines[1..2] # array containing the 2nd and 3rd line
+
+ rio('afile.txt')[1,3..5] # array containing lines 1,3,4 and 5
+
+ rio('afile.txt')[/Zippy/] # array of all lines containing 'Zippy'
+
+ rio('afile.txt')[1,3..5,/Zippy/] # array with lines 1,3,4 and 5 and all lines containing 'Zippy'
+
+ rio('afile.dat').bytes(50)[] # array containing the contents of afile.dat broken up into 50 byte chunks
+
+ rio('afile.dat').bytes(50)[0,2] # array containing the first and third such chunk
+ 
+ rio('afile.dat').bytes(50).records[0,2] # same thing
+ 
+ rio('afile.dat').bytes(50).records(0,2).to_a # once again
+
+ rio('afile.csv').csv[0..9] # array of the first 10 records of afile.csv parsed by the ::CSV module
+
+ rio('afile.csv').csv.records[0..9] # same thing
+
+ rio('afile.csv').csv(';').records[0..9] # same thing using semi-colon as the value separator
+ 
+ rio('afile.csv').csv.records[0,/Zippy/] # record 0 and all records containing 'Zippy'
+                                         # the regexp is matched against the line before parsing by ::CSV
+
+ rio('adir')[] # array of entries in 'adir'
+
+ rio('adir')['*.txt'] # array of all .txt entries
+
+ rio('adir').all['*.txt'] # array of all .txt entries in 'adir and its subdirectories
+
+ rio('adir').files['*.txt'] # array of all .txt files
+
+ rio('adir').dirs['CSV'] # array of all CSV directories
+ rio('adir').skipdirs['CSV'] # array of all non-CSV directories</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 215</span>
+215:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(*<span class="ruby-identifier">selectors</span>) <span class="ruby-identifier">target</span>[*<span class="ruby-identifier">selectors</span>] <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="append-from-method" class="method-detail ">
+		  <a name="method-i-append_from"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">append_from</span><span
+									    class="method-args">(source)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Alias for <a href="RIO/IF/Grande.html#method-i-%3C%3C">#<<</a> (append-from
+grande operator)
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="append-from-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 529</span>
+529:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">append_from</span>(<span class="ruby-identifier">source</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">append_from</span>(<span class="ruby-identifier">source</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="append-to-method" class="method-detail ">
+		  <a name="method-i-append_to"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">append_to</span><span
+									    class="method-args">(destination)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Alias for <a href="RIO/IF/Grande.html#method-i-%3E%3E">#>></a> (append-to
+grande operator)
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="append-to-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 510</span>
+510:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">append_to</span>(<span class="ruby-identifier">destination</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">append_to</span>(<span class="ruby-identifier">destination</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="copy-from-method" class="method-detail ">
+		  <a name="method-i-copy_from"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">copy_from</span><span
+									    class="method-args">(source)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Alias for <a href="RIO/IF/Grande.html#method-i-%3C">#<</a> (copy-from
+grande operator)
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="copy-from-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 624</span>
+624:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy_from</span>(<span class="ruby-identifier">source</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">copy_from</span>(<span class="ruby-identifier">source</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="copy-to-method" class="method-detail ">
+		  <a name="method-i-copy_to"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">copy_to</span><span
+									    class="method-args">(destination)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Alias for <a href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to grande
+operator)
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="copy-to-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 440</span>
+440:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy_to</span>(<span class="ruby-identifier">destination</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">copy_to</span>(<span class="ruby-identifier">destination</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="delete-method" class="method-detail ">
+		  <a name="method-i-delete"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">delete</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+For a file Rio <tt>delete</tt> calls FileUtils#rm.  For a directory Rio
+<tt>delete</tt> calls FileUtils#rmdir Returns the Rio. If the Rio does not
+exist, simply return the Rio.
+</p>
+<pre>
+ rio('afile,txt').delete # delete 'afile.txt'
+ rio('adir').delete # delete adir
+ rio('something').delete # delete something</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="delete-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 343</span>
+343:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">delete</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="delete--method" class="method-detail ">
+		  <a name="method-i-delete%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">delete!</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+For a file <a href="RIO/IF/Grande.html#method-i-delete%21">#delete!</a>
+calls FileUtils#rm.  For a directory <a
+href="RIO/IF/Grande.html#method-i-delete%21">#delete!</a> calls
+FileUtils#rmtree. Returns the Rio. If the rio does not exist, simply
+returns itself.
+</p>
+<pre>
+ rio('afile,txt').delete! # delete f.txt
+ rio('adir').delete! # delete adir
+
+ # create a directory, after deleting anything that previously had its name
+ rio('adir/asubdir').delete!.mkpath 
+</pre>
+<h4>Deleting Summary</h4>
+<ul>
+<li><p>
+To delete something only if it is not a directory use <a
+href="RIO/IF/File.html#method-i-rm">#rm</a>
+</p>
+</li>
+<li><p>
+To delete an empty directory use <a
+href="RIO/IF/Dir.html#method-i-rmdir">#rmdir</a>
+</p>
+</li>
+<li><p>
+To delete an entire directory tree use <a
+href="RIO/IF/Dir.html#method-i-rmtree">#rmtree</a>
+</p>
+</li>
+<li><p>
+To delete anything except a populated directory use <a
+href="RIO/IF/Grande.html#method-i-delete">#delete</a>
+</p>
+</li>
+<li><p>
+To delete anything use <a
+href="RIO/IF/Grande.html#method-i-delete%21">#delete!</a>
+</p>
+</li>
+</ul>
+<p>
+In all cases, deleting something that does not exist is considered
+successful.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="delete--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 367</span>
+367:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete!</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">delete!</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="each-method" class="method-detail ">
+		  <a name="method-i-each"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">each</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Iterate through a rio. Executes the block for each item selected for the
+Rio.  See <a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a>,  <a
+href="RIO/IF/GrandeEntry.html#method-i-files">#files</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-dirs">#dirs</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>  and <a
+href="RIO/IF/Grande.html#method-i-to_a">#to_a</a> for more information on
+how records are selected and what kind of record is passed to the block.
+</p>
+<p>
+<a href="RIO/IF/Grande.html#method-i-each">#each</a> is the fundemental
+method for all the Rio grande operators. <a
+href="RIO/IF/Grande.html#method-i-to_a">#to_a</a> and the Rio copy
+operators  <a href="RIO/IF/Grande.html#method-i-%3C">#<</a>, <a
+href="RIO/IF/Grande.html#method-i-%3C%3C">#<<</a>, <a
+href="RIO/IF/Grande.html#method-i-%3E%3E">#>></a>, and <a
+href="RIO/IF/Grande.html#method-i-%3E">#></a>  are all implemented in terms
+of <a href="RIO/IF/Grande.html#method-i-each">#each.</a>
+</p>
+<p>
+While <a href="RIO/IF/Grande.html#method-i-each">#each</a> is fundamental
+to a Rio, it rarely needs  actually be called because all the grande
+configuration methods will also take a block  and call <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> if one is given.  So the
+existance of a block after many methods is taken as an implied <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>
+</p>
+<p>
+For Rios that refer to files, the item passed to the block is a <a
+href="RIO/IF/String.html">String</a> containing the line or block as
+selected by <a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>,
+or <a href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes.</a> 
+<tt>lines</tt> is the default.
+</p>
+<pre>
+ rio('afile').lines.each { |line| ...}
+</pre>
+<p>
+The block passed to <tt>each</tt> will also accept an optional second
+parameter which will contain the result of the matching function. What this
+variable contains depends on the argument to <tt>lines</tt> that resulted
+in the match as follows:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+The MatchData that resulted from the match.
+</p>
+</td></tr>
+<tr><td valign="top">Range</td><td><p>
+The record number of the matching record.
+</p>
+</td></tr>
+<tr><td valign="top">Fixnum</td><td><p>
+The record number of the matching record.
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+The value returned by the proc.
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+The value resulting from sending the symbol to the <a
+href="RIO/IF/String.html">String</a>.
+</p>
+</td></tr>
+</table>
+<p>
+If no selection arguments were used, this variable will simply contain
+<tt>true</tt>.
+</p>
+<pre>
+ rio(??).puts(%w[0:zero 1:one]).rewind.lines(/(\d+):([a-z]+)/) do |line,match| 
+   puts(&quot;#{match[1]} is spelled '#{match[2]}'&quot;)
+ end
+</pre>
+<p>
+Produces:
+</p>
+<pre>
+ 0 is spelled 'zero'
+ 1 is spelled 'one'
+</pre>
+<p>
+For Rios that refer to directories, the item passed to the block is a Rio
+refering to the directory entry. 
+</p>
+<pre>
+ rio('adir').files.each do |file|
+   file.kind_of?(RIO::Rio)  # true
+ end
+</pre>
+<p>
+In addition, the Rio passed to the block inherits certain attributes from
+the directory Rio.
+</p>
+<pre>
+ rio('adir').files.chomp.each do |file| # chomp is ignored for directories,
+   file.each do |line|                  # chomp attribute is inherited by the file rio
+     # .. line is chomped
+   end
+ end
+</pre>
+<p>
+<a href="RIO/IF/Grande.html#method-i-each">#each</a> returns the Rio which
+called it.
+</p>
+<p>
+Here are a few illustrative examples
+</p>
+<ul>
+<li><p>
+Processing lines in a file
+</p>
+<pre>
+ rio('f.txt').each { |line| ... }        # execute block for every line in the file
+ rio('f.txt').lines.each { |line| ... }  # same thing
+ rio('f.txt').lines { |line| ... }       # same thing
+
+ rio('f.txt').chomp.each { |line| ... }  # same as above with lines chomped
+ rio('f.txt').chomp { |line| ... }       # ditto
+ rio('f.txt').lines.chomp { |line| ... } # ditto
+ rio('f.txt').chomp.lines { |line| ... } # ditto
+
+ rio('f.txt.gz').gzip.each { |line| ... }   # execute block for every line in a gzipped file
+ rio('f.txt.gz').gzip { |line| ... }        # same thing
+ rio('f.txt.gz').lines.gzip { |line| ... }  # same thing
+
+ rio('f.txt.gz').gzip.chomp { |line| ... } # chomp lines from a gzipped file
+ rio('f.txt.gz').gzip.chomp.each { |line| ... } # ditto
+ rio('f.txt.gz').chomp.lines.gzip { |line| ... } # ditto
+ 
+ rio('f.txt').lines(0..9) { |line| ... } # execute block for the first 10 lines in the file 
+ rio('f.txt').lines(0..9).each { |line| ... } # same thing
+
+ rio('f.txt').lines(/^\s*#/) { |line| ... } # execute block for comment-only lines
+ rio('f.txt').lines(/^\s*#/).each { |line| ... } # same thing
+ 
+ rio('f.txt').lines(0,/Rio/) { |line| ... } # execute block for the first line and
+                                            # all lines containing 'Rio'
+ 
+ rio('f.txt.gz').gzip.chomp.lines(0..1) { |line| ... } # first 2 lines chomped from a gzip file
+</pre>
+</li>
+<li><p>
+Processing a file a block at a time
+</p>
+<pre>
+ rio('f.dat').bytes(10).each { |data| ... } # process the file 10 bytes at a time
+ rio('f.dat').bytes(10) { |data| ... }      # same thing
+ rio('f.dat').bytes(10).records(2,4) { |data| ... } # only 3rd and 5th ten-byte data-block
+ rio('f.dat.gz').gzip.records(2,4).bytes(10) { |data| ... } # same from a gzipped file
+ 
+</pre>
+</li>
+<li><p>
+Iterating over directories
+</p>
+<pre>
+ rio('adir').each { |ent| ... }       # execute the block for each entry in the directory 'adir'
+ rio('adir').files.each { |file| ...} # only files
+ rio('adir').files { |file| ...}      # ditto
+ rio('adir').all.files { |file| ...}  # files, recurse into subdirectories
+ rio('adir').dirs { |dir| ...}       # only directories
+ rio('adir').files('*.rb') { |file| ...}  # only .rb files using a glob
+ rio('adir').files(/\.rb$/) { |file| ...}  # only .rb files using a regular expression
+ rio('adir').all.files('*.rb') { |file| ...}  # .rb files, recursing into subdirectories
+ rio('adir').dirs(/^\./) { |dir| ... } # only dot directories
+ rio('adir').dirs('/home/*') { |dir| ... } # home directories
+ 
+</pre>
+</li>
+</ul>
+<p>
+See <a href="RIO/Doc/HOWTO.html">RIO::Doc::HOWTO</a> and <a
+href="RIO/Doc/SYNOPSIS.html">RIO::Doc::SYNOPSIS</a> for more examples, and
+<a href="RIO/Doc/INTRO.html">RIO::Doc::INTRO</a> for further explanation.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="each-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 332</span>
+332:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">each</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="empty--method" class="method-detail ">
+		  <a name="method-i-empty%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">empty?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns true if the referenced file or directory is empty after honoring
+the grande  selection methods. 
+</p>
+<pre>
+ rio('f0').delete!.touch.empty?        #=&gt; true
+ rio('f1').puts!(&quot;Not Empty\n&quot;).empty? #=&gt; false
+ rio('d0').delete!.mkdir.empty?        #=&gt; true</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="empty--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 694</span>
+694:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">empty?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="get-method" class="method-detail ">
+		  <a name="method-i-get"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">get</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Reads and returns the next record or entry from a Rio,  honoring the grande
+selection methods. 
+</p>
+<p>
+Returns nil on end of file.
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-records">#records</a>,
+<a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>
+</p>
+<pre>
+ ario = rio('afile').lines(10..12)
+ line10 = ario.get 
+ line11 = ario.get 
+ line12 = ario.get 
+ a_nil  = ario.get 
+
+ ario = rio('adir').entries('*.txt')
+ ent1 = ario.get
+ ent2 = ario.get</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="get-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 644</span>
+644:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">get</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skip-method" class="method-detail ">
+		  <a name="method-i-skip"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skip</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande Exclude method
+</p>
+<p>
+<tt>skip</tt> can be used in two ways.
+</p>
+<h4>skip with no arguments</h4>
+<p>
+If called with no arguments it reverses the polarity of the next non-skip
+grande selection method that is called. That is, it turns <tt>lines</tt>,
+<tt>records</tt>, <tt>rows</tt>, <tt>files</tt>, <tt>dirs</tt> and
+<tt>entries</tt> into <tt>skiplines</tt>, <tt>skiprecords</tt>,
+<tt>skiprows</tt>, <tt>skipfiles</tt>,  <tt>skipdirs</tt>, and
+<tt>skipentries</tt>, respectively.
+</p>
+<pre>
+ rio('afile').skip.lines(0..5) # same as rio('afile').skiplines(0..5)
+ rio('adir').skip.files('*~')  # same as rio('adir').skipfiles('*~')
+</pre>
+<p>
+Note that it only affects the next selection method seen &#8212; and may be
+used more than once. If no grande selection method is seen, <tt>skip</tt>
+is ignored.
+</p>
+<h4>skip with arguments</h4>
+<p>
+When called with arguments it acts like <a
+href="RIO/IF/GrandeEntry.html#method-i-skipentries">#skipentries</a> for
+directory  Rios and like <a
+href="RIO/IF/GrandeStream.html#method-i-skiprecords">#skiprecords</a> for
+stream Rios.
+</p>
+<pre>
+ rio('afile').lines(/Rio/).skip[0..4] # lines containg 'Rio' excluding the
+                                      # first five lines
+
+ rio('adir').files('*.rb').skip[:symlink?] # .rb files, but not symlinks to
+                                           # .rb files
+</pre>
+<p>
+If a block is given, behaves as if <tt>skip(*args).each(&amp;block)</tt>
+had been called.
+</p>
+<p>
+Returns the Rio.
+</p>
+<p>
+See <a href="RIO/IF/GrandeStream.html#method-i-skiplines">#skiplines</a>,
+<a href="RIO/IF/GrandeStream.html#method-i-skiprecords">#skiprecords</a>,
+<a href="RIO/IF/GrandeStream.html#method-i-skiprows">#skiprows</a>,  <a
+href="RIO/IF/GrandeEntry.html#method-i-skipfiles">#skipfiles</a>, <a
+href="RIO/IF/GrandeEntry.html#method-i-skipdirs">#skipdirs</a>, and <a
+href="RIO/IF/GrandeEntry.html#method-i-skipentries">#skipentries.</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skip-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 684</span>
+684:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skip</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skip</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="split-method" class="method-detail ">
+		  <a name="method-i-split"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">split</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+<a href="RIO/IF/Grande.html#method-i-split">#split</a> has two distinct
+behaviors depending on  whether or not it is called with an argument.
+</p>
+<h4>split with no aruments:</h4>
+<p>
+Returns an array of Rios, one for each path element.  (Note that this
+behavior differs from File#split.)
+</p>
+<pre>
+ rio('a/b/c').split   #=&gt; [rio('a'),rio('b'),rio('c')]
+</pre>
+<p>
+The array returned is extended with a <tt>to_rio</tt> method,  which will
+put the parts back together again.
+</p>
+<pre>
+ ary = rio('a/b/c').split   #=&gt; [rio('a'),rio('b'),rio('c')]
+ ary.to_rio                 #=&gt; rio('a/b/c')
+
+ ary = rio('a/b/c').split   #=&gt; [rio('a'),rio('b'),rio('c')]
+ ary[1] = rio('d')
+ ary.to_rio                 #=&gt; rio('a/d/c')
+</pre>
+<p>
+See also <a href="RIO/IF/Path.html#method-i-join">#join</a>, <a
+href="RIO/IF/Path.html#method-i-%2F">#/</a>, <a
+href="RIO/IF/Path.html#method-i-splitpath">#splitpath</a>
+</p>
+<h4>split with an argument:</h4>
+<p>
+This causes String#split(arg) to be called on every line before it is
+returned. An array of the split lines is returned when iterating
+</p>
+<pre>
+ rio('/etc/passwd').split(':').columns(0,2) { |ary|
+   username,uid = ary
+ }
+ 
+ rio('/etc/passwd').split(':').columns(0,2).to_a #=&gt; [[user1,uid1],[user2,uid2]]
+
+ </pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="split-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 731</span>
+731:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">split</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="to-a-method" class="method-detail ">
+		  <a name="method-i-to_a"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">to_a</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns the contents of the rio as an array. (See ::Enumerable#to_a)
+</p>
+<p>
+<a href="RIO/IF/Grande.html#method-i-to_a">#to_a</a> is implemented in
+terms of <a href="RIO/IF/Grande.html#method-i-each">#each</a> so the the
+following are roughly equivelent
+</p>
+<pre>
+ ary = ario.to_a
+
+ ary = []
+ ario.each do |rec|
+   ary &lt;&lt; ary
+ end
+</pre>
+<p>
+What constitutes an array element is determined by <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>,  <a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-rows">#rows</a> or  by an extension
+such as <a href="RIO/IF/CSV.html#method-i-csv">#csv.</a> <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a> is the default.
+</p>
+<pre>
+ rio('afile.txt').to_a # returns an array of the lines in afile.txt
+
+ rio('afile.txt').lines(1...3).to_a # an array containing lines 1 and 2 of afile.txt
+
+ rio('afile.dat').bytes(50).to_a # an array containing the contents of afile.dat broken 
+                                 # up into 50 byte chunks
+</pre>
+<p>
+See also <a href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a> (subscript
+operator)
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="to-a-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 78</span>
+78:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_a</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">to_a</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="unlink-method" class="method-detail ">
+		  <a name="method-i-unlink"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">unlink</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+See <a href="RIO/IF/Grande.html#method-i-delete">#delete</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="unlink-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 346</span>
+346:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unlink</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">unlink</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%7C"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">|</span><span
+									    class="method-args">(destination)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Grande Pipe Operator
+</p>
+<p>
+The Rio pipe operator is actually an alternative syntax for calling the <a
+href="RIO/IF/Grande.html#method-i-%3E">#></a> (copy-to)  operator, designed
+to  allow several copy operation to be performed in one line of code, with
+behavior that mimics the pipe operator commonly available in shells.
+</p>
+<p>
+If <tt>destination</tt> is a <tt>cmdio</tt>, a <tt>cmdpipe</tt> Rio is
+returned, and none of the commands are run.
+</p>
+<p>
+Otherwise the <tt>cmdpipe</tt> Rio is run with the output of the pipe being
+copied to the destination. In this case a Rio representing the
+<tt>destination</tt> is returned.
+</p>
+<p>
+If destination is not a Rio it is passed to the Rio constructor as is done
+with the copy-to operator except that if <tt>destination</tt> is a <a
+href="RIO/IF/String.html">String</a> it is assumed to be a command instead
+of a path.
+</p>
+<pre>
+ rio('afile') | rio(?-,'grep i') | rio(?-) # returns rio(?-)
+                                           # equivelent to rio(?-, 'grep i') &lt; rio('afile') &gt; rio(?-)
+
+ rio('infile') | rio(?-, 'acmd') | rio(?-, 'acmd2') | rio('outfile')
+ # same as
+ # acmd = rio(?-,'acmd')
+ # acmd2 = rio(?-,'acmd2')
+ # out = rio('outfile')
+ # acmd &lt; rio('infile')
+ # acmd2 &lt; acmd
+ # out &lt; acmd2
+
+ rio('afile') | 'acmd' | 'acmd2' | rio('outfile') # same thing
+
+ acmdpipe = rio(?-,'acmd') | 'acmd2'
+ rio('afile') | acmdpipe | rio('outfile') # same thing
+
+ acmdpipe1 = rio(?|,'acmd','acmd2')
+ rio('afile') | acmdpipe1 | rio('outfile') # same thing
+
+ acmdpipe2 = rio('afile') | 'acmd' | 'acmd2'
+ acmdpipe2 | rio('outfile') # same thing
+</pre>
+<p>
+The grande pipe operator can not be used to create a <tt>cmdpipe</tt> Rio
+that includes a destination. This must be done using a Rio constructor
+</p>
+<pre>
+ cmd_with_output = rio(?|,'acmd',rio('outfile'))
+ rio('afile') | cmd_with_output # same as above</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande.rb, line 486</span>
+486:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">destination</span>) <span class="ruby-identifier">target</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">destination</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+  </div>
+  
+</div>
+<!-- END OF RIGHT PANE -->
+

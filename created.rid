@@ -1,0 +1,26 @@
+Tue, 08 Jun 2010 10:21:18 -0700
+./lib/rio/if/path.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/string.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/internal.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/test.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/rubyio.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/temp.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/yaml.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/csv.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/grande.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/basic.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/grande_stream.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/grande_entry.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/fileordir.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/file.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/if/dir.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/doc/INTRO.rb	Thu, 03 Jun 2010 16:57:57 -0700
+./lib/rio/doc/OPTIONAL.rb	Thu, 03 Jun 2010 16:57:57 -0700
+./lib/rio/doc/SYNOPSIS.rb	Thu, 03 Jun 2010 16:57:57 -0700
+./lib/rio/doc/INDEX.rb	Thu, 03 Jun 2010 16:57:57 -0700
+./lib/rio/doc/EXAMPLES.rb	Thu, 03 Jun 2010 16:57:57 -0700
+./lib/rio/doc/HOWTO.rb	Thu, 03 Jun 2010 16:57:57 -0700
+./lib/rio/kernel.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio/constructor.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./lib/rio.rb	Thu, 03 Jun 2010 16:58:02 -0700
+./README	Fri, 04 Jun 2010 16:49:42 -0700

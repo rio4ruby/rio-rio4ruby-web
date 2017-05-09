@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- RIGHT PANE -->
+<div id="right-pane" class="pane menu-closed">
+  <div id="right-doc" title="RIO/IF/Test.html">
+    <div id="file-show" ></div>
+    
+    <div id="section-idx" style="display: none;">
+      
+      <div id="section-idx-methods" class="enabled" ></div>
+      
+      <div id="section-idx-namespaces" class="disabled" ></div>
+      
+      <div id="section-idx-modules" class="disabled" ></div>
+      
+      <div id="section-idx-in_files" class="enabled" ></div>
+    </div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::Test" >
+	  <div id="documentation">
+	    <div id="log"></div>
+	    <div id="test-barx">
+	    </div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::Test</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="abs--method" class="method-detail ">
+		  <a name="method-i-abs%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">abs?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns true if the rio represents an absolute path or URI. Alias for <a
+href="RIO/IF/Test.html#method-i-absolute%3F">#absolute?</a>
+</p>
+<pre>
+ rio('/tmp').abs?                     # &gt;&gt; true
+ rio('.ssh').abs?                     # &gt;&gt; false
+ rio('file:///tmp').abs?              # &gt;&gt; true
+ rio('http://www.ruby-doc.org/').abs? # &gt;&gt; true</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="abs--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 259</span>
+259:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">abs?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">abs?</span>()  <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="absolute--method" class="method-detail ">
+		  <a name="method-i-absolute%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">absolute?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns true if the <a href="RIO/Rio.html">Rio</a> represents and absolute
+path or URI. Calls URI#absolute?
+</p>
+<pre>
+ rio('/tmp').absolute?                     # &gt;&gt; true
+ rio('.ssh').absolute?                     # &gt;&gt; false
+ rio('file:///tmp').absolute?              # &gt;&gt; true
+ rio('http://www.ruby-doc.org/').absolute? # &gt;&gt; true</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="absolute--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 269</span>
+269:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">absolute?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">absolute?</span>()  <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="atime-method" class="method-detail ">
+		  <a name="method-i-atime"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">atime</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#atime
+</p>
+<p>
+Returns the last access time (a Time object) for the file system object
+referenced
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="atime-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 159</span>
+159:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">atime</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">atime</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="blockdev--method" class="method-detail ">
+		  <a name="method-i-blockdev%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">blockdev?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#blockdev?
+</p>
+<pre>
+ rio('afile').blockdev?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a block device.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="blockdev--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 56</span>
+56:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blockdev?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">blockdev?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="chardev--method" class="method-detail ">
+		  <a name="method-i-chardev%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">chardev?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#chardev?
+</p>
+<pre>
+ rio('afile').chardev?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a character device.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="chardev--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 61</span>
+61:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chardev?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">chardev?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="closed--method" class="method-detail ">
+		  <a name="method-i-closed%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">closed?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls IO#closed?
+</p>
+<pre>
+ ario.closed?    =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if <em>ario</em> is completely closed (for duplex
+streams, both reader and writer), <tt>false</tt> otherwise.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="closed--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 98</span>
+98:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closed?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">closed?</span>()  <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="ctime-method" class="method-detail ">
+		  <a name="method-i-ctime"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">ctime</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#ctime
+</p>
+<p>
+Returns the change time for Rios that reference file system object (that
+is,  the time directory information about the file was changed, not the
+file itself).    
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="ctime-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 165</span>
+165:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ctime</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ctime</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="dir--method" class="method-detail ">
+		  <a name="method-i-dir%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">dir?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Alias for <a href="RIO/IF/Test.html#method-i-directory%3F">#directory?</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="dir--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 69</span>
+69:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dir?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">dir?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="directory--method" class="method-detail ">
+		  <a name="method-i-directory%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">directory?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#directory?
+</p>
+<pre>
+ rio('afile').directory?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a directory, <tt>false</tt>
+otherwise.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="directory--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">directory?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="executable--method" class="method-detail ">
+		  <a name="method-i-executable%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">executable?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#executable?
+</p>
+<p>
+Returns true if the file is executable by the effective user id of this
+process.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="executable--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 175</span>
+175:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">executable?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">executable?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="executable-real--method" class="method-detail ">
+		  <a name="method-i-executable_real%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">executable_real?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#executable_real?
+</p>
+<p>
+Returns true if the file is executable by the real user id of this process.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="executable-real--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 180</span>
+180:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">executable_real?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">executable_real?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="exist--method" class="method-detail ">
+		  <a name="method-i-exist%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">exist?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#exist?
+</p>
+<pre>
+ rio('afile').exist?()    =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file exists.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="exist--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 74</span>
+74:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exist?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="file--method" class="method-detail ">
+		  <a name="method-i-file%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">file?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#file?
+</p>
+<pre>
+ rio('afile').file?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file exists and is a regular file.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="file--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 79</span>
+79:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">file?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="fnmatch--method" class="method-detail ">
+		  <a name="method-i-fnmatch%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-callseq">fnmatch?( pattern, [flags] ) => (true or false)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#fnmatch?
+</p>
+<p>
+Returns true if <a href="RIO/IF/Path.html#method-i-path">#path</a> matches
+<em>pattern</em>. The pattern is not a regular expression; instead it
+follows rules similar to shell filename globbing. It may contain the
+following metacharacters:
+</p>
+<p>
+<em>flags</em> is a bitwise OR of the <tt>FNM_xxx</tt> parameters. The same
+glob pattern and flags are used by <tt>Dir::glob</tt>.
+</p>
+<pre>
+ rio('cat').fnmatch?('cat')              #=&gt; true
+ rio('category').fnmatch?('cat')         #=&gt; false
+ rio('cats').fnmatch?('c{at,ub}s')       #=&gt; false
+ rio('cubs').fnmatch?('c{at,ub}s')       #=&gt; false
+ rio('cat').fnmatch?('c{at,ub}s')        #=&gt; false
+
+ rio('cat').fnmatch?('c?t')              #=&gt; true
+ rio('cat').fnmatch?('c\?t')             #=&gt; false
+ rio('cat').fnmatch?('c??t')             #=&gt; false
+ rio('cats').fnmatch?('c*')              #=&gt; true
+
+ rio('cat').fnmatch?('c*t')                       #=&gt; true
+ rio('cat').fnmatch?('c\at')                      #=&gt; true
+ rio('cat').fnmatch?('c\at',File::FNM_NOESCAPE)   #=&gt; false
+ rio('a/b').fnmatch?('a?b')                       #=&gt; true
+ rio('a/b').fnmatch?('a?b',File::FNM_PATHNAME)    #=&gt; false
+
+ rio('.profile').fnmatch?('*')                           #=&gt; false
+ rio('.profile').fnmatch?('*',File::FNM_DOTMATCH)        #=&gt; true
+ rio('dave/.profile').fnmatch?('*')                      #=&gt; true
+ rio('dave/.profile').fnmatch?('*',File::FNM_DOTMATCH)   #=&gt; true
+ rio('dave/.profile').fnmatch?('*',File::FNM_PATHNAME)   #=&gt; false</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="fnmatch--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 136</span>
+136:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fnmatch?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">fnmatch?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="ftype-method" class="method-detail ">
+		  <a name="method-i-ftype"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">ftype</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#ftype
+</p>
+<p>
+Identifies the type of the named file; the return string is one of
+&#8216;file�, &#8216;directory�,  &#8216;characterSpecial�,
+&#8216;blockSpecial�, &#8216;fifo�, &#8216;link�, &#8216;socket�,
+or &#8216;unknown�.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="ftype-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 142</span>
+142:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ftype</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">ftype</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="grpowned--method" class="method-detail ">
+		  <a name="method-i-grpowned%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">grpowned?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#grpowned?
+</p>
+<pre>
+ rio('afile').grpowned?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file exists and the effective group id
+of the calling process is the owner of the file. Returns <tt>false</tt> on
+Windows.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="grpowned--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 222</span>
+222:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grpowned?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">grpowned?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="lstat-method" class="method-detail ">
+		  <a name="method-i-lstat"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">lstat</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#lstat
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="lstat-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 148</span>
+148:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lstat</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">lstat</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="mountpoint--method" class="method-detail ">
+		  <a name="method-i-mountpoint%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">mountpoint?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls Pathname#mountpoint?
+</p>
+<p>
+Returns <tt>true</tt> if <tt>self</tt> points to a mountpoint.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="mountpoint--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 274</span>
+274:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mountpoint?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mountpoint?</span>()  <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="mtime-method" class="method-detail ">
+		  <a name="method-i-mtime"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">mtime</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#mtime
+</p>
+<p>
+Returns the modification time for <a href="RIO/Rio.html">Rio</a> that
+reference file system objects
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="mtime-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 170</span>
+170:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mtime</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mtime</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="open--method" class="method-detail ">
+		  <a name="method-i-open%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">open?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Returns <tt>true</tt> if a <a href="RIO/Rio.html">Rio</a> is not <a
+href="RIO/IF/Test.html#method-i-closed%3F">#closed?</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="open--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 92</span>
+92:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">open?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="owned--method" class="method-detail ">
+		  <a name="method-i-owned%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">owned?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#owned?
+</p>
+<pre>
+ rio('afile').owned?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file exists and the effective used id of
+the calling process is the owner of the file.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="owned--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 215</span>
+215:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">owned?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">owned?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="pipe--method" class="method-detail ">
+		  <a name="method-i-pipe%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">pipe?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#pipe?
+</p>
+<pre>
+ rio('afile').pipe?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a pipe.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="pipe--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 153</span>
+153:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pipe?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">pipe?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="readable--method" class="method-detail ">
+		  <a name="method-i-readable%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">readable?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#readable?
+</p>
+<pre>
+ rio('afile').readable?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is readable by the effective user
+</p>
+<pre>
+     id of this process.</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="readable--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 186</span>
+186:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readable?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">readable?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="readable-real--method" class="method-detail ">
+		  <a name="method-i-readable_real%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">readable_real?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#readable_real?
+</p>
+<pre>
+ rio('afile').readable_real?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is readable by the real user id of
+this process.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="readable-real--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 192</span>
+192:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readable_real?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">readable_real?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="root--method" class="method-detail ">
+		  <a name="method-i-root%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">root?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls Pathname#root?
+</p>
+<p>
+<a href="RIO/IF/Test.html#method-i-root%3F">#root?</a> is a predicate for
+root directories.  I.e. it returns <tt>true</tt> if the pathname consists
+of consecutive slashes.
+</p>
+<p>
+It doesn&#8217;t access the actual filesystem.  So it may return
+<tt>false</tt> for some pathnames which points to roots such as
+<tt>/usr/..</tt>.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="root--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 284</span>
+284:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">root?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">root?</span>()  <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="setgid--method" class="method-detail ">
+		  <a name="method-i-setgid%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">setgid?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#setgid?
+</p>
+<pre>
+ rio('afile').setgid?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a has the setgid bit set.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="setgid--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 227</span>
+227:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setgid?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">setgid?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="setuid--method" class="method-detail ">
+		  <a name="method-i-setuid%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">setuid?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#setuid?
+</p>
+<pre>
+ rio('afile').setuid?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a has the setuid bit set.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="setuid--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 232</span>
+232:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setuid?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">setuid?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="size-method" class="method-detail ">
+		  <a name="method-i-size"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">size</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#size
+</p>
+<pre>
+ rio('afile').size     =&gt; integer
+</pre>
+<p>
+Returns the size of <em>afile</em>. To get the length of the Rio&#8217;s
+string representation use <a
+href="RIO/Rio.html#method-i-length">Rio#length</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="size-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 238</span>
+238:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">size</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="size--method" class="method-detail ">
+		  <a name="method-i-size%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">size?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#size?
+</p>
+<pre>
+ rio('afile').size?     =&gt; integer  or  nil
+</pre>
+<p>
+Returns <tt>nil</tt> if <em>afile</em> doesn&#8217;t exist or has zero
+size, the size of the file otherwise.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="size--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 244</span>
+244:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">size?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="socket--method" class="method-detail ">
+		  <a name="method-i-socket%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">socket?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#socket?
+</p>
+<pre>
+ rio('afile').socket?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a socket.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="socket--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 84</span>
+84:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">socket?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">socket?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="stat-method" class="method-detail ">
+		  <a name="method-i-stat"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">stat</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls File#stat
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="stat-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 145</span>
+145:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stat</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">stat</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="sticky--method" class="method-detail ">
+		  <a name="method-i-sticky%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">sticky?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#sticky?
+</p>
+<pre>
+ rio('afile').sticky?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a has the sticky bit set.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="sticky--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 209</span>
+209:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sticky?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">sticky?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="symlink--method" class="method-detail ">
+		  <a name="method-i-symlink%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">symlink?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#symlink?
+</p>
+<pre>
+ rio('afile').symlink?     =&gt;  true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is a symbolic link.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="symlink--source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 89</span>
+89:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">symlink?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">symlink?</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="writable--method" class="method-detail ">
+		  <a name="method-i-writable%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">writable?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#writable?
+</p>
+<pre>
+ rio('afile').writable?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is writable by the effective user
+id of this process.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="writable--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 198</span>
+198:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">writable?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">writable?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="writable-real--method" class="method-detail ">
+		  <a name="method-i-writable_real%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">writable_real?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#writable_real?
+</p>
+<pre>
+ rio('afile').writable_real?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file is writable by the real user id of
+this process.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="writable-real--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 204</span>
+204:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">writable_real?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">writable_real?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="zero--method" class="method-detail ">
+		  <a name="method-i-zero%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">zero?</span><span
+									    class="method-args">(*args)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileTest#zero?
+</p>
+<pre>
+ rio('afile').zero?     =&gt; true or false
+</pre>
+<p>
+Returns <tt>true</tt> if the named file exists and has a zero size.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="zero--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/test.rb, line 249</span>
+249:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">zero?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">zero?</span>(*<span class="ruby-identifier">args</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+  </div>
+  
+</div>
+<!-- END OF RIGHT PANE -->
+

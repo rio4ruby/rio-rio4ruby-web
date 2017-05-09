@@ -1,0 +1,2906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <title>Module: RIO::IF::GrandeStream</title>
+
+
+    <script src="../../js/jquery.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <script src="../../js/jquery-ui/js/jquery-ui-1.8.1.custom.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <link rel="stylesheet"
+	  href="../../js/jquery-ui/css/smoothness/jquery-ui-1.8.1.custom.css"
+	  type="text/css" media="screen" />
+
+
+    <script src="../../js/jquery.ba-replacetext.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <script src="../../js/jquery.getUrlParam.js" type="text/javascript"
+	    charset="utf-8"></script>
+    
+    <script src="../../js/jquery.cookie.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+
+
+
+
+<!--
+
+    <link rel="stylesheet" href="../../rdoc.css" type="text/css"
+	  media="screen" />
+
+    <script src="../../js/tab-body.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+-->
+
+    <link rel="stylesheet" href="/test/rdoc.css" type="text/css"
+	  media="screen" />
+
+    <script src="/test/js/tab-body.js" type="text/javascript"
+	    charset="utf-8"></script>
+
+    <!--
+    <script src="../../js/darkfish.js" type="text/javascript"
+	    charset="utf-8"></script>
+    -->
+    
+    
+  </head>
+  <body class="module">
+
+
+
+
+
+    <!-- LEFT PANE -->
+    <div id="left-pane" class="pane">
+      <div id="tab-tops">
+	<div id="tab-C" class="context">
+	  <p  class="css-vertical-text">
+	    <a href="../../RIO/IF/GrandeStream.html" target="_top">Classes</a>
+	  </p>
+	</div>
+	<div id="tab-M" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/GrandeStream.html" target="_top">Methods</a>
+	  </p>
+	</div>
+	<div id="tab-F" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/GrandeStream.html" target="_top">Files</a>
+	  </p>
+	</div>
+
+	<div id="tab-I" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/GrandeStream.html" target="_top">In Files</a>
+	  </p>
+	</div>
+	<div id="tab-J" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/GrandeStream.html" target="_top">Modules</a>
+	  </p>
+	</div>
+	<div id="tab-N" class="context">
+	  <p class="css-vertical-text">
+	    <a href="../../RIO/IF/GrandeStream.html" target="_top">Namespaces</a>
+	  </p>
+	</div>
+
+      </div>
+
+    </div>
+    <!-- END OF LEFT PANE -->
+
+
+      <!-- MIDDLE PANE -->
+      <div id="middle-pane" class="pane">
+	<div id="menu-pane">
+	  <div id="menu-dialog" class="tb_show_listener tb_hide_listener tb_change_listener">
+
+	    <!-- METADATA -->
+	    <div id="metadata">
+
+	      <!-- PROJECT METADATA -->
+	      <div id="project-metadata">
+
+		
+		
+		
+		<div id="fileindex-section" class="section project-section selectable-file-list">
+		  <h3 class="section-header">Files</h3>
+		  <div class="section-body">
+		    <ul>
+		      
+		      <li class="file"><a href="../../README.html">README</a></li>
+		      
+		    </ul>
+		  </div>
+		</div>
+		
+
+		
+		<div id="classindex-section" class="section project-section">
+		  <h3 class="section-header">Class Index</h3>
+		  <div class="section-body">
+		    <ul class="link-list">
+		      
+		      <li><a class="modlink" href="../../RIO.html" target="_top">RIO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc.html" target="_top">RIO::Doc</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/EXAMPLES.html" target="_top">RIO::Doc::EXAMPLES</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/HOWTO.html" target="_top">RIO::Doc::HOWTO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/INDEX.html" target="_top">RIO::Doc::INDEX</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/INTRO.html" target="_top">RIO::Doc::INTRO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/OPTIONAL.html" target="_top">RIO::Doc::OPTIONAL</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Doc/SYNOPSIS.html" target="_top">RIO::Doc::SYNOPSIS</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF.html" target="_top">RIO::IF</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/CSV.html" target="_top">RIO::IF::CSV</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Dir.html" target="_top">RIO::IF::Dir</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/File.html" target="_top">RIO::IF::File</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/FileOrDir.html" target="_top">RIO::IF::FileOrDir</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Grande.html" target="_top">RIO::IF::Grande</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/GrandeEntry.html" target="_top">RIO::IF::GrandeEntry</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/GrandeStream.html" target="_top">RIO::IF::GrandeStream</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Path.html" target="_top">RIO::IF::Path</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/RubyIO.html" target="_top">RIO::IF::RubyIO</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/String.html" target="_top">RIO::IF::String</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/Test.html" target="_top">RIO::IF::Test</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/IF/YAML.html" target="_top">RIO::IF::YAML</a></li>
+		      
+		      <li><a class="modlink" href="../../RIO/Rio.html" target="_top">RIO::Rio</a></li>
+		      
+		      <li><a class="modlink" href="../../Kernel.html" target="_top">Kernel</a></li>
+		      
+		    </ul>
+		  </div>
+		  <div id="no-class-search-results" style="display: none;">
+		    No matching classes.
+		  </div>
+		</div>
+
+	      </div>
+	      <!-- END OF PROJECT METADATA -->
+
+
+
+	      <!-- CLASS METADATA -->
+	      <div id="class-metadata">
+
+		<!-- Method Quickref -->
+		
+		<div id="method-list-section" class="section">
+		  <div id="method-list">
+		    <h3 class="section-header">Methods</h3>
+		    <div class="section-body">
+		      <ul class="link-list">
+			
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-%2B%40" target="_top">#+@</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-a" target="_top">#a</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-a%21" target="_top">#a!</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-bytes" target="_top">#bytes</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-chomp" target="_top">#chomp</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-chomp%3F" target="_top">#chomp?</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-closeoncopy" target="_top">#closeoncopy</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-closeoncopy%3F" target="_top">#closeoncopy?</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-closeoneof" target="_top">#closeoneof</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-closeoneof%3F" target="_top">#closeoneof?</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-contents" target="_top">#contents</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-getline" target="_top">#getline</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-getrec" target="_top">#getrec</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-getrow" target="_top">#getrow</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-gzip" target="_top">#gzip</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-gzip%3F" target="_top">#gzip?</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-line" target="_top">#line</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-lines" target="_top">#lines</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-noautoclose" target="_top">#noautoclose</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-nocloseoncopy" target="_top">#nocloseoncopy</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-nocloseoneof" target="_top">#nocloseoneof</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-putrec" target="_top">#putrec</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-r" target="_top">#r</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-r%21" target="_top">#r!</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-record" target="_top">#record</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-records" target="_top">#records</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-row" target="_top">#row</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-rows" target="_top">#rows</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-skiplines" target="_top">#skiplines</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-skiprecords" target="_top">#skiprecords</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-skiprows" target="_top">#skiprows</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-splitlines" target="_top">#splitlines</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-strip" target="_top">#strip</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-strip%3F" target="_top">#strip?</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-w" target="_top">#w</a></li>
+			
+			<li><a class="methlink" href="GrandeStream.html#method-i-w%21" target="_top">#w!</a></li>
+			
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+		
+
+		<!-- Parent Class -->
+		
+
+		<!-- Namespace Contents -->
+		
+
+		<!-- Included Modules -->
+		
+	      </div>
+	      <!-- END OF CLASS METADATA -->
+
+
+	      <!-- FILE METADATA -->
+	      <div id="file-metadata">
+		<div id="file-list-section" class="section selectable-file-list">
+		  <div id="file-list">
+		    
+		    <h3 class="section-header">In Files</h3>
+		    <div class="section-body">
+		      <ul>
+			
+			<li><a href="../../lib/rio/if/grande_stream_rb.html"
+			       class="thickbox"
+			       title="lib/rio/if/grande_stream.rb">lib/rio/if/grande_stream.rb</a></li>
+			
+		      </ul>
+		    </div>
+		  </div>
+		</div>
+		
+		
+	      </div>
+	      <!-- END OF FILE METADATA -->
+	      
+
+
+	      
+	    </div>
+	    <!-- END OF METADATA -->
+
+
+	  </div>
+
+	</div>
+	
+      </div>
+      <!-- END OF MIDDLE PANE -->
+
+
+
+
+
+      <!-- RIGHT PANE -->
+      <div id="right-pane" class="pane menu-closed">
+	<div id="file-show" ></div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::GrandeStream" >
+	  <div id="documentation">
+	    <div id="log"></div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::GrandeStream</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="--method" class="method-detail ">
+		  <a name="method-i-%2B%40"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">+@</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Unary Plus. Alternate form of <a
+href="RIO/IF/GrandeStream.html#method-i-a">#a</a>
+</p>
+<pre>
+ rio('f1') &gt; rio('f2')     # copy f1 to f2
+ rio('f1') &gt; rio('f2').a   # append f1 to f2
+ rio('f1') &gt; +rio('f2')    # same thing
+ rio('f1') &gt;&gt; rio('f2')    # same thing</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 313</span>
+313:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">+@</span>()
+314:         <span class="ruby-constant">RIO</span><span class="ruby-operator">::</span><span class="ruby-identifier">no_warn</span> { <span class="ruby-operator">+</span><span class="ruby-identifier">target</span> }
+315:         <span class="ruby-keyword kw">self</span>
+316:       <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="a-method" class="method-detail ">
+		  <a name="method-i-a"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">a</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the implicit output mode to &#8216;a&#8217;.
+</p>
+<p>
+This is the mode <a href="RIO/Rio.html">Rio</a> will use for output when no
+mode is specified
+</p>
+<p>
+Rios normally don&#8217;t need to be opened or have their open mode
+specified. A <a href="RIO/Rio.html">Rio</a> determines the mode based on
+the file system object and on the action specified. For instance when a <a
+href="RIO/Rio.html">Rio</a> encounters a <tt>read</tt> on a file it opens
+the file for reading using File#open and calls IO#read; when it encounters
+a <tt>read</tt> on a directory it knows to use Dir#open and call Dir#read.
+When it encounters a <a href="RIO/IF/RubyIO.html#method-i-puts">#puts</a>,
+it knows to perform a File#open, and call IO#puts on the returned handle.
+By default when a method requires a file be opened for writing the file is
+opened with a mode of &#8216;w&#8217;. <a
+href="RIO/IF/GrandeStream.html#method-i-a">#a</a> changes this implicit 
+output mode to &#8216;a&#8217;. 
+</p>
+<p>
+Note that this is not the same as setting the output mode
+<b>explicitly</b>, as in rio(&#8216;afile&#8217;).mode(&#8216;a&#8217;).
+When the mode is set explicitly using <a
+href="RIO/IF/RubyIO.html#method-i-mode">#mode</a>, the mode specified will
+be used regardless of the operation being performed. The <a
+href="RIO/IF/GrandeStream.html#method-i-a">#a</a> method only affects how
+<a href="RIO/Rio.html">Rio</a> opens a file when it sees an operator that
+requires writing, and must determine for itself how to open it.
+</p>
+<pre>
+ rio('afile').puts!('Hello World') # call IO#puts on a file handle opened in 'w' mode
+ rio('afile').a.puts!('Hello World') # call IO#puts on a file handle opened in 'a' mode
+</pre>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-a%21">#a!</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-w%21">#w!</a> for setting the
+implicit output mode &#8216;a+&#8217; and &#8216;w+&#8217; respectively
+</p>
+<p>
+The methods <a href="RIO/IF/GrandeStream.html#method-i-a">#a</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-a%21">#a!</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-w">#w</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-w%21">#w!</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-r">#r</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-r%21">#r!</a> set the
+<tt>implicit</tt> open mode  to
+&#8216;a&#8217;,&#8217;a+&#8217;,&#8217;w&#8217;,&#8217;w+&#8217;,&#8217;r&#8217;
+and &#8216;r+&#8217; respectively. 
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-%2B%40">#+@</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="a-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 304</span>
+304:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">a</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">a</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="a--method" class="method-detail ">
+		  <a name="method-i-a%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">a!</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the implicit output mode to &#8216;a+&#8217;. 
+</p>
+<p>
+The implicit output mode is the mode <a href="RIO/Rio.html">Rio</a> will
+use for output when no mode is specified.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+See the discussion for #a. 
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="a--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 327</span>
+327:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">a!</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">a!</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="bytes-method" class="method-detail ">
+		  <a name="method-i-bytes"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">bytes</span><span
+									    class="method-args">(n=1,*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the rio to read bytes and returns the rio
+</p>
+<p>
+<em>n</em> specifies the number of bytes to be returned on each iteration
+of <a href="RIO/IF/Grande.html#method-i-each">#each</a> or by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec.</a> If
+<em>args</em> are provided, they are treated as record selectors as if
+<tt>ario.bytes(n).records(*args)</tt> had been called. See also <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>
+</p>
+<p>
+If called with a block behaves as if
+<tt>ario.bytes(n,*args).each(&amp;block)</tt> had been called
+</p>
+<pre>
+ rio('f.dat').bytes(1024) { |rec| ... }      # iterate through f.txt 1024 bytes at a time
+ rio('f.dat').bytes(1024).each { |rec| ... } # same as above
+
+ rio('f.dat').bytes(1024,0..4) { |rec| ... } # iterate through the first five 1024 byte blocks
+
+ rio('f.dat').bytes(64).to_a # return the contents of f.dat as an array of 64 byte chunks
+
+ rio('f.dat').bytes(512).records(0,7..9) &gt; rio('dfile.dat') # copy 512-byte blocks 0,7,8 and 9 to dfile.dat
+
+ rio('f.dat').bytes(2048).records[0...10] # return an array containing the first 10 2K blocks of f.dat
+ rio('f.dat').bytes(2048)[0...10]         # same thing
+
+ rio('f.dat').bytes { |bytestr| ... } # iterate over f.dat 1 byte at a time. 
+ rio('f.dat').bytes[0...100]          # returns an array of the first 100 bytes of f.dat</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="bytes-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 128</span>
+128:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bytes</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>,*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">bytes</span>(<span class="ruby-identifier">n</span>,*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="chomp-method" class="method-detail ">
+		  <a name="method-i-chomp"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">chomp</span><span
+									    class="method-args">(arg=true,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the <a href="RIO/Rio.html">Rio</a> to chomp lines and returns the <a
+href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+When called with a block, behaves as if <tt>chomp.each(&amp;block)</tt> had
+been called
+</p>
+<p>
+chomp causes lines returned by each, to_a, readlines, readline, gets,
+each_line etc. to be chomped before iterated over or assigned
+</p>
+<pre>
+ rio('f.txt').chomp.each { |line| ... } # Block is called with lines already chomped
+
+ rio('f.txt').chomp { |line| ... } # same as above
+
+ rio('f.txt').chomp.to_a # returns the lines of f.txt chomped
+
+ rio('f.txt').chomp.lines(1..2).to_a # returns an array containg lines 1 and 2 of the file after being chomped
+
+   This would have similar results to rio('f.txt').lines(1..2).to_a.map{ |line| line.chomp}
+
+ rio('f.txt').lines(1..2).chomp.to_a # same as above
+
+ rio('f.txt').chomp.readlines # returns the lines of f.txt chomped
+
+ rio('f.txt').chomp.gets # returns the first line of 'f.txt' chomped
+
+ rio('f.txt').chomp &gt; an_array # copies the chomped lines of f.txt into an_array
+
+ # fill an array with all the 'require' lines in all the .rb files (recursively) in adir
+ # chomping each line
+
+ an_array = []
+ rio('adir').chomp.all.files(&quot;*.rb&quot;) { |file| 
+   an_array += file.lines[/^\s*require/]
+ }
+
+ or simply
+
+ an_array = rio('adir').chomp.all.files(&quot;*.rb&quot;).lines[/^\s*require/]</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="chomp-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 619</span>
+619:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chomp</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="chomp--method" class="method-detail ">
+		  <a name="method-i-chomp%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">chomp?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Queries the Rio&#8217;s chomp-mode. See #chomp.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="chomp--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 579</span>
+579:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chomp?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">chomp?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="closeoncopy-method" class="method-detail ">
+		  <a name="method-i-closeoncopy"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">closeoncopy</span><span
+									    class="method-args">(arg=true,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Set a Rio&#8217;s closeoncopy mode
+</p>
+<pre>
+ ario.closeoncopy(&amp;block) =&gt; ario
+</pre>
+<p>
+<a href="RIO/IF/GrandeStream.html#method-i-closeoncopy">#closeoncopy</a>
+causes the <a href="RIO/Rio.html">Rio</a> being written to to be closed
+when using  a grande copy operator. While <a
+href="RIO/IF/GrandeStream.html#method-i-closeoneof">#closeoneof</a> causes
+all Rio&#8217;s to be closed when reading to the end of file, it does not
+affect Rios being written to. <a
+href="RIO/IF/GrandeStream.html#method-i-closeoncopy">#closeoncopy</a> only
+affects the <a href="RIO/Rio.html">Rio</a> being written to and only when a
+grande copy operator is used. <tt>closeoncopy</tt> is on by default, with
+one exception. 
+</p>
+<pre>
+ dest = rio('destfile')
+ dest &lt; rio('srcfile')
+ dest.closed?   #=&gt; true
+
+ dest = rio('destfile').nocloseoncopy
+ dest &lt; rio('srcfile')
+ dest.closed?   #=&gt; false
+ dest.close     # must be explicitly closed
+
+ dest = rio('destfile')
+ dest.print(rio('srcfile').contents)
+ dest.closed?   #=&gt; false (IF::RubyIO#print is not a copy operator)
+ dest.close
+</pre>
+<h4>The Exception</h4>
+<p>
+When a block is passed directly to the rio constructor <tt>closeoncopy</tt>
+is turned off.
+</p>
+<pre>
+ rio('afile') { |file|
+   file.closeoncopy? #=&gt; false
+   file &lt; a_string
+   file.closed?  #=&gt; false
+ }
+ # The file is now closed. See IF::GrandeStream#rio for more informatioin
+</pre>
+<h4>Why?</h4>
+<p>
+Some of my favorite <a href="RIO/Rio.html">Rio</a> idioms are its copy
+one-liners
+</p>
+<pre>
+ rio('afile') &lt; a_string # put a string into a file
+ rio('afile') &lt; an_array # put an array into a file
+ rio('afile') &lt; rio('anotherfile').lines(0..9) # copy the first 10 lines of anotherfile into afile
+ rio('afile.gz').gzip &lt; rio('anotherfile').lines(0..9) # same thing into a gzipped file
+</pre>
+<p>
+In each of these cases, &#8216;afile&#8217; would remain open after the
+copy and furthermore since the destination <a href="RIO/Rio.html">Rio</a>
+was not saved in a variable, There is no way to close file. Without
+closeoncopy Something like this would be required:
+</p>
+<pre>
+ ario = rio('afile')
+ ario &lt; something_else
+ ario.close
+</pre>
+<p>
+Or this...
+</p>
+<pre>
+ ario = rio('afile') &lt; something_else
+ ario.close
+</pre>
+<p>
+Or this...
+</p>
+<pre>
+ (rio('afile') &lt; something_else).close
+</pre>
+<p>
+One line, but ugly, and prone to error.
+</p>
+<p>
+What I want is this:
+</p>
+<pre>
+ rio('afile') &lt; something_else
+</pre>
+<p>
+Simple. I want to copy this to that, I point the arrow and it works.
+</p>
+<p>
+In perl the rio&#8217;s destructor would be called, because there are no
+remaining references to the <a href="RIO/Rio.html">Rio</a> However, it my
+understanding and experience that in Ruby the finalizer will not
+necessarily be  called at this point. 
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="closeoncopy-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 541</span>
+541:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closeoncopy</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">closeoncopy</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="closeoncopy--method" class="method-detail ">
+		  <a name="method-i-closeoncopy%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">closeoncopy?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Query a Rio&#8217;s closeoncopy mode
+</p>
+<pre>
+    ario.closeoncopy? =&gt; true or false
+</pre>
+<p>
+See <a
+href="RIO/IF/GrandeStream.html#method-i-closeoncopy">#closeoncopy</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="closeoncopy--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 559</span>
+559:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closeoncopy?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">closeoncopy?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="closeoneof-method" class="method-detail ">
+		  <a name="method-i-closeoneof"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">closeoneof</span><span
+									    class="method-args">(arg=true,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Set the Rio&#8217;s closeoneof mode. 
+</p>
+<pre>
+ ario.closeoneof(&amp;block) =&gt; ario
+</pre>
+<p>
+<tt>closeoneof</tt> causes a <a href="RIO/Rio.html">Rio</a> to be closed
+automatically whenever the end of file is reached. This affects# all
+methods that read from  a rio (<a
+href="RIO/IF/RubyIO.html#method-i-readlines">#readlines</a>, #to_a, <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> <a
+href="RIO/IF/RubyIO.html#method-i-gets">#gets</a> etc.) Because
+<tt>closeoneof</tt> must be on for many of Rio&#8217;s most useful idioms,
+it is on by default. <tt>closeoneof</tt> can be turned off using
+#nocloseoneof.
+</p>
+<p>
+If a block is given behaves like <tt>ario.closeoneof.each(&amp;block)</tt>
+had been called
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<pre>
+ ario = rio('afile')
+ lines = ario.readlines
+ ario.closed?     #=&gt; true
+
+ ario = rio('afile').nocloseoneof
+ lines = ario.readlines
+ ario.closed?     #=&gt; false
+ ario.close       # must be explicitly closed
+</pre>
+<p>
+<tt>closeoneof</tt> is ignored by directory Rios, however, setting it on a
+directory <a href="RIO/Rio.html">Rio</a>  causes each file <a
+href="RIO/Rio.html">Rio</a> returned while iterating to inherit the
+directory&#8217;s setting
+</p>
+<pre>
+ rio('adir').files do |file|
+   file.closeoneof?    #=&gt; true
+ end
+
+ rio('adir').files.nocloseoneof do |file|
+   file.closeoneof?    #=&gt; false
+ end
+
+ rio('adir').files.nocloseoneof['*.rb'] # array of .rb file Rios in adir with closeoneof off
+
+ drio = rio('adir').files
+ frio1 = drio.read
+ frio1.closeoneof?    #=&gt; true
+ drio.nocloseoneof
+ frio2 = drio.read 
+ frio2.closeoneof?    #=&gt; false
+
+ </pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="closeoneof-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 426</span>
+426:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closeoneof</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">closeoneof</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="closeoneof--method" class="method-detail ">
+		  <a name="method-i-closeoneof%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">closeoneof?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Query a Rio&#8217;s closeoneof mode
+</p>
+<pre>
+ ario.closeoneof?    =&gt; true or false
+</pre>
+<p>
+See <a href="RIO/IF/GrandeStream.html#method-i-closeoneof">#closeoneof</a>
+and <a
+href="RIO/IF/GrandeStream.html#method-i-nocloseoneof">#nocloseoneof</a>
+</p>
+<pre>
+ ario = rio('afile')
+ ario.closeoneof?  #=&gt; true
+ lines = ario.to_a
+ ario.closed?     #=&gt; true
+
+ ario = rio('afile').nocloseoneof
+ ario.closeoneof?  #=&gt; false
+ lines = ario.to_a
+ ario.closed?     #=&gt; false
+ ario.close       # must be explicitly closed</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="closeoneof--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 464</span>
+464:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">closeoneof?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">closeoneof?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="contents-method" class="method-detail ">
+		  <a name="method-i-contents"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">contents</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Slurps the contents of the rio into a string.
+</p>
+<pre>
+ astring = rio('afile.txt').contents # slurp the entire contents of afile.txt into astring</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="contents-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 271</span>
+271:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">contents</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">contents</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="getline-method" class="method-detail ">
+		  <a name="method-i-getline"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">getline</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Temporarily set the <a href="RIO/Rio.html">Rio</a> to read lines, and call
+<a href="RIO/IF/Grande.html#method-i-get">#get</a>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-records">#records</a>,
+<a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="getline-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 264</span>
+264:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getline</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">getline</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="getrec-method" class="method-detail ">
+		  <a name="method-i-getrec"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">getrec</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Temporarily set the <a href="RIO/Rio.html">Rio</a> to read records, and
+call <a href="RIO/IF/Grande.html#method-i-get">#get</a>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-records">#records</a>,
+<a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="getrec-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 250</span>
+250:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getrec</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">getrec</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="getrow-method" class="method-detail ">
+		  <a name="method-i-getrow"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">getrow</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Temporarily set the <a href="RIO/Rio.html">Rio</a> to read rows, and call
+<a href="RIO/IF/Grande.html#method-i-get">#get</a>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-rows">#rows</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/Grande.html#method-i-each">#each</a>, <a
+href="RIO/IF/Grande.html#method-i-%5B%5D">#[]</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="getrow-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 257</span>
+257:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getrow</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">getrow</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="gzip-method" class="method-detail ">
+		  <a name="method-i-gzip"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">gzip</span><span
+									    class="method-args">(&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the <a href="RIO/Rio.html">Rio</a> to gzip mode. 
+</p>
+<pre>
+    ario.gzip    #=&gt; ario
+</pre>
+<p>
+If applied to a <a href="RIO/Rio.html">Rio</a> that is being read from
+Reads through a <tt>Zlib::GzipReader</tt>; If applied to a <a
+href="RIO/Rio.html">Rio</a> that is being written to  writes through a
+<tt>Zlib::GzipWriter</tt>.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+If a block is given, acts like <tt>ario.gzip.each(&amp;block)</tt>
+</p>
+<pre>
+ rio('afile') &gt; rio('afile.gz').gzip # gzip a file
+ rio('afile.gz').gzip &lt; rio('afile') # same thing
+
+ rio('afile.gz').gzip &gt; rio('afile') # ungzip a file
+ rio('afile') &lt; rio('afile.gz').gzip # same thing
+
+ rio('afile.gz').gzip.chomp { |line| ...} # process each chomped line of a gzipped file
+ rio('afile.gz').gzip[0..9] # an array containing the first 10 lines of a gzipped file</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="gzip-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 660</span>
+660:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gzip</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">gzip</span>(<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="gzip--method" class="method-detail ">
+		  <a name="method-i-gzip%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">gzip?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Queries the Rio&#8217;s gzip-mode
+</p>
+<pre>
+ ario.gzip?     #=&gt; true or false
+</pre>
+<p>
+See <a href="RIO/IF/GrandeStream.html#method-i-gzip">#gzip</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="gzip--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 667</span>
+667:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gzip?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">gzip?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="line-method" class="method-detail ">
+		  <a name="method-i-line"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">line</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls <a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>(*args)
+but when used with the subscript operator returns the first element of the
+returned array instead of the array.
+</p>
+<p>
+If afile contains [&#8220;line 0n&#8220;,&#8220;line 1n&#8220;]
+</p>
+<pre>
+ rio('afile').line[0]       #=&gt; &quot;line 0\n&quot;
+ rio('afile').line[1]       #=&gt; &quot;line 1\n&quot;
+ rio('afile').lines[0]      #=&gt; [&quot;line 0\n&quot;]
+ rio('afile').lines[1]      #=&gt; [&quot;line 1\n&quot;]
+ rio('afile').lines[0][0]   #=&gt; &quot;line 0\n&quot;
+ rio('afile').lines[1][0]   #=&gt; &quot;line 1\n&quot;</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="line-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 64</span>
+64:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">line</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">line</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="lines-method" class="method-detail ">
+		  <a name="method-i-lines"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">lines</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the rio to read lines and returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+If called with a block behaves as if <tt>lines(*args).each(&amp;block)</tt>
+had been called
+</p>
+<p>
+<tt>lines</tt> returns the <a href="RIO/Rio.html">Rio</a> which called it.
+This might seem counter-intuitive at first.  One might reasonably assume
+that
+</p>
+<pre>
+ rio('adir').lines(0..10)
+</pre>
+<p>
+would return lines. It does not. It configures the rio to return lines and
+returns the <a href="RIO/Rio.html">Rio</a>. This enables chaining for
+further configuration so constructs like
+</p>
+<pre>
+ rio('afile').lines(0..10).skiplines(/::/)
+</pre>
+<p>
+are possible.
+</p>
+<p>
+If args are provided they may be one or more of the following:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+any matching record will be processed
+</p>
+</td></tr>
+<tr><td valign="top">Range</td><td><p>
+specifies a range of records (zero-based) to be included
+</p>
+</td></tr>
+<tr><td valign="top">Integer</td><td><p>
+interpreted as a one element range of lines to be processed
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+a proc which will be called for each record, records are included unless
+nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+a symbol which will <em>sent</em> to each record, records are included
+unless nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+an array of other selectors. records are selected unless any of the matches
+fail.
+</p>
+</td></tr>
+</table>
+<pre>
+ rio('f.txt').lines(/^\s*#/) { |line| ... } # iterate over comment-only lines
+ rio('f.txt').lines(/^\s*#/).each { |line| ... } # same as above
+
+ rio('f.txt').lines(1,7..9) &gt; rio('anotherfile.txt') # copy lines 1,7,8 and 9 to anotherfile.txt
+
+ rio('f.txt').lines(1...3).to_a # return an array containing lines 1 and 2 of f.txt
+ rio('f.txt').lines[1...3]      # same thing</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="lines-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 103</span>
+103:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">lines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="noautoclose-method" class="method-detail ">
+		  <a name="method-i-noautoclose"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">noautoclose</span><span
+									    class="method-args">(arg=false,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Turns off both closeoneof and closeoncopy. Equivelent to:
+</p>
+<pre>
+ ario.nocloseoneof.nocloseoncopy
+</pre>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<pre>
+ ario.noautoclose(&amp;block) =&gt; ario
+</pre>
+<p>
+If a block is given, acts as if 
+</p>
+<pre>
+ ario.noautoclose.each(&amp;block) 
+</pre>
+<p>
+had been called.
+</p>
+<p>
+See <a
+href="RIO/IF/GrandeStream.html#method-i-nocloseoneof">#nocloseoneof</a> and
+<a
+href="RIO/IF/GrandeStream.html#method-i-nocloseoncopy">#nocloseoncopy</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="noautoclose-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 573</span>
+573:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">noautoclose</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">false</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">noautoclose</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="nocloseoncopy-method" class="method-detail ">
+		  <a name="method-i-nocloseoncopy"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">nocloseoncopy</span><span
+									    class="method-args">(arg=false,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Set a Rio&#8217;s closeoncopy mode to false
+</p>
+<pre>
+    ario.nocloseoncopy(&amp;block) =&gt; ario
+</pre>
+<p>
+See <a
+href="RIO/IF/GrandeStream.html#method-i-closeoncopy">#closeoncopy</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="nocloseoncopy-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 550</span>
+550:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nocloseoncopy</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">false</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">nocloseoncopy</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="nocloseoneof-method" class="method-detail ">
+		  <a name="method-i-nocloseoneof"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">nocloseoneof</span><span
+									    class="method-args">(arg=false,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Set the Rio&#8217;s closeoneof mode to false
+</p>
+<pre>
+ ario.nocloseoneof(&amp;block) =&gt; ario
+</pre>
+<p>
+See <a href="RIO/IF/GrandeStream.html#method-i-closeoneof">#closeoneof</a>
+</p>
+<p>
+If a block is given behaves like
+</p>
+<pre>
+ ario.nocloseoneof.each(&amp;block)
+</pre>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<pre>
+ ario = rio('afile')
+ lines = ario.to_a
+ ario.closed?     #=&gt; true
+
+ ario = rio('afile').nocloseoneof
+ lines = ario.to_a
+ ario.closed?     #=&gt; false
+ ario.close       # must be explicitly closed</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="nocloseoneof-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 446</span>
+446:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nocloseoneof</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">false</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">nocloseoneof</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="putrec-method" class="method-detail ">
+		  <a name="method-i-putrec"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">putrec</span><span
+									    class="method-args">(el)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Writes a single record to a <a href="RIO/Rio.html">Rio</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="putrec-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 275</span>
+275:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">putrec</span>(<span class="ruby-identifier">el</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">putrec</span>(<span class="ruby-identifier">el</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="r-method" class="method-detail ">
+		  <a name="method-i-r"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">r</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the implicit input mode to &#8216;r&#8217;. 
+</p>
+<p>
+The implicit input mode is the mode <a href="RIO/Rio.html">Rio</a> will use
+for input when no mode is specified.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+See the discussion for #a. 
+</p>
+<p>
+Since &#8216;r&#8217; is the implicit input mode used by default, this
+method is probably uneeded.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="r-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 341</span>
+341:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">r</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">r</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="r--method" class="method-detail ">
+		  <a name="method-i-r%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">r!</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the implicit input mode to &#8216;r+&#8217;. 
+</p>
+<p>
+The implicit input mode is the mode <a href="RIO/Rio.html">Rio</a> will use
+for input when no mode is specified.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+See the discussion for #a. 
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="r--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 352</span>
+352:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">r!</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">r!</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="record-method" class="method-detail ">
+		  <a name="method-i-record"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">record</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+See #line.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="record-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 68</span>
+68:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">record</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">record</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="records-method" class="method-detail ">
+		  <a name="method-i-records"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">records</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Specifies which records will be iterated through by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a>
+</p>
+<p>
+If called with a block behaves as if
+<tt>records(*args).each(&amp;block)</tt> had been called
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+If no args are provided, all records are selected.  What constitutes a
+record is affected by <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>,<a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a>, and extensions
+such as <a href="RIO/IF/CSV.html#method-i-csv">#csv</a> and <a
+href="RIO/IF/YAML.html#method-i-yaml">#yaml.</a>
+</p>
+<p>
+If args are provided they may be one or more of the following:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+any matching record will be iterated over by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a>
+</p>
+</td></tr>
+<tr><td valign="top">Integer</td><td><p>
+specifies a record-number (zero-based) to be iterated over by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a>
+</p>
+</td></tr>
+<tr><td valign="top">Range</td><td><p>
+specifies a range of records (zero-based) to included in the iteration
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+a proc which will be called for each record, records are included unless
+nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+a symbol which will <em>sent</em> to each record, records are included
+unless nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+an array of any of above. All must match for a line to be included
+</p>
+</td></tr>
+</table>
+<p>
+Any other argument type is compared with the record using its <tt>===</tt>
+method.
+</p>
+<p>
+If the argument is a ::Proc it may be called with one, two or three
+paramaters.
+</p>
+<ol>
+<li><p>
+the record
+</p>
+</li>
+<li><p>
+the recno (optional)
+</p>
+</li>
+<li><p>
+the rio (optional)
+</p>
+</li>
+</ol>
+<p>
+Note in the following examples that since <tt>lines</tt> is the default
+<tt>ario.records(*args)</tt> is effectively the same as
+<tt>ario.lines(*args)</tt>.
+</p>
+<pre>
+ rio('afile').records(0) { |line| ... } # iterate over the first line of 'afile'
+ rio('afile').records(0,5..7)) { |line| ... } # iterate over lines 0,5,6 and 7
+ rio('afile').records(/Zippy/) { |line| ... } # iterate over all lines containing 'Zippy'
+
+ rio('f.csv').puts!([&quot;h0,h1&quot;,&quot;f0,f1&quot;]) # Create f.csv                
+
+ rio('f.csv').csv.records[]    #==&gt;[[&quot;h0&quot;, &quot;h1&quot;], [&quot;f0&quot;, &quot;f1&quot;]]
+ rio('f.csv').csv.lines[]      #==&gt;[&quot;h0,h1\n&quot;, &quot;f0,f1\n&quot;]
+ rio('f.csv').csv.records[0]   #==&gt;[[&quot;h0&quot;, &quot;h1&quot;]]</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="records-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 170</span>
+170:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">records</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">records</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="row-method" class="method-detail ">
+		  <a name="method-i-row"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">row</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+See #line.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="row-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 72</span>
+72:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">row</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">row</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="rows-method" class="method-detail ">
+		  <a name="method-i-rows"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">rows</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the <a href="RIO/Rio.html">Rio</a> to read rows and specifies rows
+which should be iterated through  by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec.</a> <a
+href="RIO/IF/GrandeStream.html#method-i-rows">#rows</a> is intended for use
+by extensions, where the concept of a row is reasonable.  In the absensence
+of an extension behaves like #records.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="rows-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 236</span>
+236:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rows</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">rows</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skiplines-method" class="method-detail ">
+		  <a name="method-i-skiplines"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skiplines</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the <a href="RIO/Rio.html">Rio</a> to read lines and specifies lines
+which should <b>not</b> be iterated through by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or  returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a>
+</p>
+<p>
+If called with a block behaves as if
+<tt>skiplines(*args).each(&amp;block)</tt> had been called
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-records">#records</a>, <a
+href="RIO/IF/Grande.html#method-i-skip">#skip</a>
+</p>
+<p>
+If no args are provided, no lines are rejected.
+</p>
+<p>
+If args are provided they may be one or more of the following:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+any matching line will not be processed
+</p>
+</td></tr>
+<tr><td valign="top">Integer</td><td><p>
+specifies a line-number (zero-based) to be skipped
+</p>
+</td></tr>
+<tr><td valign="top">Range</td><td><p>
+specifies a range of lines (zero-based) to be excluded
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+a proc which will be called for each line, lines are excluded unless nil or
+false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+a symbol which will <em>sent</em> to each line, lines are excluded unless
+nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+an array of any of above. All must match for a line to be included
+</p>
+</td></tr>
+</table>
+<pre>
+ rio('afile').skiplines(0) { |line| ... } # iterate over all but the first line of 'afile'
+ rio('afile').skiplines(0,5..7)) { |line| ... } # don't iterate over lines 0,5,6 and 7
+ rio('afile').skiplines(/Zippy/) { |line| ... } # skip all lines containing 'Zippy'
+ rio('afile').chomp.skiplines(:empty?) { |line| ... } # skip empty lines</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skiplines-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 229</span>
+229:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skiplines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skiplines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skiprecords-method" class="method-detail ">
+		  <a name="method-i-skiprecords"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skiprecords</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Specifies records which should <b>not</b> be iterated through by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a>
+</p>
+<p>
+If called with a block behaves as if
+<tt>skiprecords(*args).each(&amp;block)</tt> had been called
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-records">#records</a>,
+<a href="RIO/IF/GrandeStream.html#method-i-skiplines">#skiplines</a>, <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>, <a
+href="RIO/IF/Grande.html#method-i-skip">#skip</a>
+</p>
+<p>
+If no args are provided, no records are rejected. What constitutes a record
+is affected by <a
+href="RIO/IF/GrandeStream.html#method-i-lines">#lines</a>,<a
+href="RIO/IF/GrandeStream.html#method-i-bytes">#bytes</a>, and extensions
+such as <a href="RIO/IF/CSV.html#method-i-csv">#csv</a> and <a
+href="RIO/IF/YAML.html#method-i-yaml">#yaml.</a>
+</p>
+<p>
+If args are provided they may be one or more of the following:
+</p>
+<table>
+<tr><td valign="top">Regexp</td><td><p>
+any matching record will not be processed
+</p>
+</td></tr>
+<tr><td valign="top">Integer</td><td><p>
+specifies a record-number (zero-based) to be skipped
+</p>
+</td></tr>
+<tr><td valign="top">Range</td><td><p>
+specifies a range of records (zero-based) to be excluded
+</p>
+</td></tr>
+<tr><td valign="top">Proc</td><td><p>
+a proc which will be called for each record, records are excluded unless
+nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Symbol</td><td><p>
+a symbol which will <em>sent</em> to each record, records are excluded
+unless nil or false is returned
+</p>
+</td></tr>
+<tr><td valign="top">Array</td><td><p>
+an array of any of the above, all of which must match for the array to
+match.
+</p>
+</td></tr>
+</table>
+<p>
+Note in the following examples that since <tt>lines</tt> is the default
+record  type <tt>ario.skiprecords(*args)</tt> is effectively  the same as
+<tt>ario.skiplines(*args)</tt>.
+</p>
+<pre>
+ rio('afile').skiprecords(0) { |line| ... } # iterate over all but the first line of 'afile'
+ rio('afile').skiprecords(0,5..7)) { |line| ... } # don't iterate over lines 0,5,6 and 7
+ rio('afile').skiprecords(/Zippy/) { |line| ... } # skip all lines containing 'Zippy'
+ rio('afile').chomp.skiplines(:empty?) { |line| ... } # skip empty lines</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skiprecords-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 202</span>
+202:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skiprecords</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skiprecords</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="skiprows-method" class="method-detail ">
+		  <a name="method-i-skiprows"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">skiprows</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the <a href="RIO/Rio.html">Rio</a> to read rows and specifies lines
+which should <b>not</b> be iterated  through by <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> or returned by <a
+href="RIO/IF/GrandeStream.html#method-i-getrec">#getrec</a> <a
+href="RIO/IF/GrandeStream.html#method-i-skiprows">#skiprows</a> is intended
+for use by extensions, where the concept of a row is  reasonable. In the
+absence of an extension behaves like <a
+href="RIO/IF/GrandeStream.html#method-i-skiprecords">#skiprecords</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="skiprows-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 243</span>
+243:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">skiprows</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">skiprows</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="splitlines-method" class="method-detail ">
+		  <a name="method-i-splitlines"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">splitlines</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+This causes String#split(arg) to be called on every line before it is
+returned. An array of the split lines is returned when iterating
+</p>
+<pre>
+ rio('/etc/passwd').split(':').columns(0,2) { |ary|
+   username,uid = ary
+ }
+ 
+ rio('/etc/passwd').split(':').columns(0,2).to_a #=&gt; [[user1,uid1],[user2,uid2]]
+</pre>
+<p>
+See also <a href="RIO/IF/Grande.html#method-i-split">#split</a>
+</p>
+<pre>
+ </pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="splitlines-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 689</span>
+689:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">splitlines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">splitlines</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="strip-method" class="method-detail ">
+		  <a name="method-i-strip"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">strip</span><span
+									    class="method-args">(arg=true,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the <a href="RIO/Rio.html">Rio</a> to strip lines and returns the <a
+href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+When called with a block, behaves as if strip.each(&amp;block) had been
+called
+</p>
+<p>
+<tt>strip</tt> causes lines returned by each, to_a, readlines, readline,
+gets, each_line etc. to be stripped with String#strip before iterated over
+or assigned
+</p>
+<pre>
+ ans = rio(?-).print(&quot;A Prompt&gt; &quot;).strip.gets # prompt the user
+</pre>
+<p>
+See also <a href="RIO/IF/GrandeStream.html#method-i-chomp">#chomp</a>
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="strip-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 638</span>
+638:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strip</span>(<span class="ruby-identifier">arg</span>=<span class="ruby-keyword kw">true</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">strip</span>(<span class="ruby-identifier">arg</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="strip--method" class="method-detail ">
+		  <a name="method-i-strip%3F"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">strip?</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Queries the Rio&#8217;s strip-mode. See #strip.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="strip--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 625</span>
+625:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strip?</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">strip?</span>() <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="w-method" class="method-detail ">
+		  <a name="method-i-w"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">w</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the implicit output mode to &#8216;w&#8217;. 
+</p>
+<p>
+The implicit output mode is the mode <a href="RIO/Rio.html">Rio</a> will
+use for output when no mode is specified.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+See the discussion for #a. 
+</p>
+<p>
+Since &#8216;w&#8217; is the implicit output mode used by default, this
+method is uneeded, but is provided for completeness..
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="w-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 366</span>
+366:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">w</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">w</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="w--method" class="method-detail ">
+		  <a name="method-i-w%21"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">w!</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Sets the implicit output mode to &#8216;w+&#8217;. 
+</p>
+<p>
+The implicit output mode is the mode <a href="RIO/Rio.html">Rio</a> will
+use for output when no mode is specified.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<pre>
+ rio(?-,'cat').w!.puts!(&quot;Hello Kitty&quot;).readline #=&gt; &quot;Hello Kitty&quot;
+</pre>
+<p>
+See the discussion for #a. 
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="w--source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/grande_stream.rb, line 379</span>
+379:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">w!</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">w!</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+
+      </div>
+      <!-- END OF RIGHT PANE -->
+
+    
+
+  </body>
+</html>
+

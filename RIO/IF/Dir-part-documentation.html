@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<!-- RIGHT PANE -->
+<div id="right-pane" class="pane menu-closed">
+  <div id="right-doc" title="RIO/IF/Dir.html">
+    <div id="file-show" ></div>
+    
+    <div id="section-idx" style="display: none;">
+      
+      <div id="section-idx-methods" class="enabled" ></div>
+      
+      <div id="section-idx-namespaces" class="disabled" ></div>
+      
+      <div id="section-idx-modules" class="disabled" ></div>
+      
+      <div id="section-idx-in_files" class="enabled" ></div>
+    </div>
+	<!-- CLASS/MODULE DOCUMENTATION -->
+	<div id="outdoc" title="RIO::IF::Dir" >
+	  <div id="documentation">
+	    <div id="log"></div>
+	    <div id="test-barx">
+	    </div>
+
+	    <div id="documentation-header">
+	      <div class="klass-type">module</div>
+	      <h1 class="module">RIO::IF::Dir</h1>
+	      <!-- Parent Class -->
+	      <div class="parent">
+		
+		<div class="rel-prefix"><a href="../..">rel_prefix: (../..)</a></div>
+	      </div>
+	      
+	      
+              
+	      
+	      
+	      
+	      
+	      
+	      <div class="bottom"></div>
+	    </div>
+	    
+	    <div id="description">
+	      
+	    </div>
+	    
+
+	    <!-- Constants -->
+	    
+	    
+	    <!-- Attributes -->
+	    
+	    
+
+
+	    <!-- Methods -->
+	    
+	    <div id="public-instance-method-details" class="method-section section">
+	      <h3 class="section-header">Public Instance Methods</h3>
+
+	      <!-- SECTION-BODY -->
+	      <div class="section-body">
+	      
+		
+		<!-- methods.each -->
+		<div id="chdir-method" class="method-detail ">
+		  <a name="method-i-chdir"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">chdir</span><span
+									    class="method-args">(&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls ::Dir#chdir.
+</p>
+<p>
+Changes the current working directory of the process to the directory
+specified by the <a href="RIO/Rio.html">Rio</a>.  Raises a SystemCallError
+(probably Errno::ENOENT) if the target directory does not exist or  if the
+<a href="RIO/Rio.html">Rio</a> does not reference a directory.
+</p>
+<p>
+If a block is given changes to the directory specified by the rio for the
+length of the block and changes back outside the block
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<pre>
+ rio('/home').chdir  # change the current working directory to /home
+ # the working directory here is /home
+ rio('/tmp/data/mydata').delete!.mkpath.chdir {
+    # the working directory here is /tmp/data/mydata
+ }
+ # the working directory here is /home</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="chdir-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 71</span>
+71:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chdir</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">chdir</span>(&amp;<span class="ruby-identifier">block</span>);<span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="find-method" class="method-detail ">
+		  <a name="method-i-find"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">find</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls Find#find
+</p>
+<p>
+Uses ::Find#find to find all entries recursively for a <a
+href="RIO/Rio.html">Rio</a> that  specifies a directory. Note that there
+are other ways to recurse through a directory structure using a <a
+href="RIO/Rio.html">Rio</a>. See <a
+href="RIO/IF/Grande.html#method-i-each">#each</a> and <a
+href="RIO/IF/GrandeEntry.html#method-i-all">#all.</a>
+</p>
+<p>
+Calls the block passing a <a href="RIO/Rio.html">Rio</a> for each entry
+found. The <a href="RIO/Rio.html">Rio</a> inherits file attrubutes from the
+directory <a href="RIO/Rio.html">Rio</a>.
+</p>
+<p>
+Returns itself
+</p>
+<pre>
+ rio('adir').find { |entrio| puts &quot;#{entrio}: #{entrio.file?}&quot; }
+
+ rio('adir').chomp.find do |entrio|
+   next unless entrio.file?
+   lines = entrio[0..10]  # lines are chomped because 'chomp' was inherited
+ end</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="find-source">
+		      <pre>
+			    <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 93</span>
+93:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">find_entries</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="glob-method" class="method-detail ">
+		  <a name="method-i-glob"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">glob</span><span
+									    class="method-args">(string,*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls ::Dir#glob
+</p>
+<p>
+Returns the filenames found by expanding the pattern given in string, 
+either as an array or as parameters to the block. In both cases the
+filenames are expressed as a <a href="RIO/Rio.html">Rio</a>. Note that this
+pattern is not a regexp (it�s closer to a shell glob).  See File::fnmatch
+for details of file name matching and the meaning of the flags parameter.
+</p>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="glob-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 105</span>
+105:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">glob</span>(<span class="ruby-identifier">string</span>,*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">string</span>,*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="mkdir-method" class="method-detail ">
+		  <a name="method-i-mkdir"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">mkdir</span><span
+									    class="method-args">(*args,&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileUtils#mkdir
+</p>
+<p>
+Makes a new directory named by the <a href="RIO/Rio.html">Rio</a> with
+permissions specified by the optional parameter.  The permissions may be
+modified by the value of File::umask
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>. If the directory already
+exists, just returns the <a href="RIO/Rio.html">Rio</a>.
+</p>
+<pre>
+ rio('adir').mkdir</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="mkdir-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 158</span>
+158:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mkdir</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mkdir</span>(*<span class="ruby-identifier">args</span>,&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="mkpath-method" class="method-detail ">
+		  <a name="method-i-mkpath"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">mkpath</span><span
+									    class="method-args">(&block)</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileUtils#mkpath
+</p>
+<p>
+Makes a new directory named by the <a href="RIO/Rio.html">Rio</a> and any
+directories in its path that do not exist.
+</p>
+<p>
+Returns the <a href="RIO/Rio.html">Rio</a>. If the directory already
+exists, just returns the <a href="RIO/Rio.html">Rio</a>.
+</p>
+<pre>
+ rio('adir/a/b').mkpath</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="mkpath-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 147</span>
+147:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mkpath</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-identifier">target</span>.<span class="ruby-identifier">mkpath</span>(&amp;<span class="ruby-identifier">block</span>); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="rmdir-method" class="method-detail ">
+		  <a name="method-i-rmdir"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">rmdir</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls ::Dir#rmdir
+</p>
+<p>
+Deletes the directory referenced by the <a href="RIO/Rio.html">Rio</a>. 
+Raises a subclass of SystemCallError if the directory isn�t empty.
+Returns the <a href="RIO/Rio.html">Rio</a>. If the directory does not
+exist, just returns the <a href="RIO/Rio.html">Rio</a>.
+</p>
+<p>
+See also <a href="RIO/IF/Dir.html#method-i-rmtree">#rmtree</a>, <a
+href="RIO/IF/Grande.html#method-i-delete">#delete</a>, <a
+href="RIO/IF/Grande.html#method-i-delete%21">#delete!</a>
+</p>
+<pre>
+   rio('adir').rmdir # remove the empty directory 'adir'</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="rmdir-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 118</span>
+118:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rmdir</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">rmdir</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+		<!-- methods.each -->
+		<div id="rmtree-method" class="method-detail ">
+		  <a name="method-i-rmtree"></a>
+
+		  <!-- METHOD-HEADING -->
+		  <div class="method-heading">
+		    
+		    <span class="method-name">rmtree</span><span
+									    class="method-args">()</span>
+		    <span class="method-click-advice">click to toggle source</span>
+		    
+		  </div>
+		  <!-- END OF METHOD-HEADING -->
+
+
+		  <!-- METHOD-DESCRIPTION -->
+		  <div class="method-description">
+		    
+		    <p>
+Calls FileUtils#rmtree
+</p>
+<p>
+Removes a directory <a href="RIO/Rio.html">Rio</a> recursively. Returns the
+<a href="RIO/Rio.html">Rio</a>.  If the directory does not exist, simply
+returns the <a href="RIO/Rio.html">Rio</a>
+</p>
+<p>
+If called with a block, behaves as if <tt>rmtree.each(&amp;block)</tt> had
+been called
+</p>
+<p>
+See also <a href="RIO/IF/Grande.html#method-i-delete%21">#delete!</a>
+</p>
+<pre>
+ rio('adir').rmtree # removes the directory 'adir' recursively
+
+ # delete the directory 'adir', recreate it and then change to the new directory
+ rio('adir/asubdir').rmtree.mkpath.chdir {
+   ...
+ }</pre>
+		    
+
+		    
+		    <div class="method-source-code"
+			 id="rmtree-source">
+		      <pre>
+			     <span class="ruby-comment cmt"># File lib/rio/if/dir.rb, line 138</span>
+138:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rmtree</span>() <span class="ruby-identifier">target</span>.<span class="ruby-identifier">rmtree</span>(); <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">end</span>
+		      </pre>
+		    </div>
+		    
+
+		  </div>
+		  <!-- END OF METHOD-DESCRIPTION -->
+
+
+		  
+
+		  
+		  
+
+
+
+		</div>
+		<!-- end of methods.each -->
+		
+
+	      </div>
+	      <!-- END OF SECTION-BODY -->
+
+
+	    </div>
+	    <!-- End of Methods -->
+	    
+	    
+	    <div id="validator-badges">
+	      <p><small>Copyright &copy; 2005-2017 Christopher Kleckner. <a href="http://www.gnu.org/licenses/gpl.html">All rights reserved</a>.</small></p>
+	      
+	    </div>
+
+	  </div>
+	</div>
+	<!-- END OF CLASS/MODULE DOCUMENTATION -->
+
+  </div>
+  
+</div>
+<!-- END OF RIGHT PANE -->
+
